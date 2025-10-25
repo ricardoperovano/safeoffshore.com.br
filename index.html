@@ -34,7 +34,7 @@
     <!-- Critical CSS - Inline for Fast Render -->
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--primary-color:#0066cc;--primary-dark:#004999;--text-primary:#2c3e50;--text-light:#fff;--bg-white:#fff;--light-blue:#e8f4f8;--transition-normal:0.3s ease;--shadow-md:0 4px 6px rgba(0,0,0,0.1);--shadow-lg:0 10px 20px rgba(0,0,0,0.15);--spacing-md:2rem;--font-primary:'Poppins',sans-serif}
+        :root{--primary-color:#0066cc;--primary-dark:#004999;--text-primary:#2c3e50;--text-light:#fff;--bg-white:#fff;--light-blue:#e8f4f8;--border-color:#e1e8ed;--transition-normal:0.3s ease;--shadow-md:0 4px 6px rgba(0,0,0,0.1);--shadow-lg:0 10px 20px rgba(0,0,0,0.15);--spacing-md:2rem;--font-primary:'Poppins',sans-serif}
         html{scroll-behavior:smooth;font-size:16px}
         body{font-family:'Roboto',sans-serif;color:var(--text-primary);line-height:1.6;overflow-x:hidden;background-color:var(--bg-white)}
         img{max-width:100%;height:auto;display:block}
@@ -56,6 +56,8 @@
         .dropdown-menu li{width:100%}
         .dropdown-menu a{display:block;padding:0.75rem 1.5rem;border-radius:0}
         .dropdown-menu a:hover{background-color:var(--light-blue);color:var(--primary-color)}
+        .dropdown-all-link{border-bottom:1px solid var(--border-color);margin-bottom:0.25rem}
+        .dropdown-all-link a{font-weight:600;color:var(--primary-color)}
         .mobile-menu-toggle{display:none;flex-direction:column;gap:4px;background:none;border:none;cursor:pointer;padding:0.5rem}
         .mobile-menu-toggle span{width:25px;height:3px;background-color:var(--text-primary);border-radius:3px;transition:var(--transition-normal)}
         .hero{position:relative;height:100vh;min-height:600px;overflow:hidden;margin-top:80px}
@@ -69,6 +71,9 @@
         .hero-title{font-size:3.5rem;font-weight:700;margin-bottom:1rem;text-shadow:2px 2px 4px rgba(0,0,0,0.3)}
         .hero-subtitle{font-size:1.8rem;margin-bottom:0.5rem;font-weight:500}
         .hero-description{font-size:1.2rem;margin-bottom:2rem;opacity:0.95}
+        .slider-control,.slider-dots{opacity:0;transition:opacity 0.3s ease}
+        .fa-loaded .slider-control,.fa-loaded .slider-dots{opacity:1}
+        .fas,.fa{font-family:inherit}
         @media(max-width:768px){
             .nav-menu{display:none;position:fixed;top:80px;left:0;right:0;background:var(--bg-white);flex-direction:column;padding:2rem;box-shadow:var(--shadow-md);gap:0;max-height:calc(100vh - 80px);overflow-y:auto}
             .nav-menu.active{display:flex}
@@ -76,6 +81,8 @@
             .dropdown-menu{position:static;opacity:1;visibility:visible;transform:none;box-shadow:none;padding-left:1rem;display:none;margin-top:0.5rem}
             .dropdown.active .dropdown-menu{display:block}
             .dropdown.active .dropdown-toggle i{transform:rotate(180deg)}
+            .dropdown-all-link{background-color:var(--light-blue);margin-bottom:0.5rem;border-radius:5px}
+            .dropdown-all-link a{padding:0.75rem 1rem}
             .hero-title{font-size:2rem}
             .hero-subtitle{font-size:1.2rem}
         }
@@ -94,7 +101,7 @@
     <noscript><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"></noscript>
 
     <!-- Font Awesome - Async Load -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet';document.documentElement.classList.add('fa-loaded')">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
 
     <!-- Structured Data for SEO -->
@@ -142,6 +149,7 @@
                                 Serviços <i class="fas fa-chevron-down"></i>
                             </a>
                             <ul class="dropdown-menu">
+                                <li class="dropdown-all-link"><a href="servicos/">📋 Ver Todos os Serviços</a></li>
                                 <li><a href="servicos/sinalizacao-nautica/">Sinalização Náutica</a></li>
                                 <li><a href="servicos/comercio-de-equipamentos-de-sinalizacao-nautica/">Comércio de Equipamentos</a></li>
                                 <li><a href="servicos/apoio-subaquatico/">Apoio Subaquático</a></li>
