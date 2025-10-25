@@ -86,6 +86,14 @@
         .dot.active{background:var(--bg-white);width:30px;border-radius:6px}
         .fa-loaded .slider-control,.fa-loaded .slider-dots{opacity:1}
         .fas,.fa{font-family:inherit}
+        .gallery-modal{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.95);z-index:9999;align-items:center;justify-content:center}
+        .gallery-modal.active{display:flex}
+        .gallery-modal img{max-width:90%;max-height:90vh;object-fit:contain}
+        .modal-close,.modal-prev,.modal-next{position:absolute;background:rgba(255,255,255,0.9);border:none;width:50px;height:50px;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s ease;z-index:10000}
+        .modal-close{top:2rem;right:2rem}
+        .modal-prev{left:2rem;top:50%;transform:translateY(-50%)}
+        .modal-next{right:2rem;top:50%;transform:translateY(-50%)}
+        .modal-close i,.modal-prev i,.modal-next i{font-size:1.2rem;color:var(--primary-color)}
         @media(max-width:768px){
             .nav-menu{display:none;position:fixed;top:80px;left:0;right:0;background:var(--bg-white);flex-direction:column;padding:2rem;box-shadow:var(--shadow-md);gap:0;max-height:calc(100vh - 80px);overflow-y:auto}
             .nav-menu.active{display:flex}
@@ -104,6 +112,10 @@
             .slider-control.prev{left:1rem}
             .slider-control.next{right:1rem}
             .slider-dots{bottom:1rem}
+            .modal-close{top:1rem;right:1rem;width:40px;height:40px}
+            .modal-prev{left:1rem;width:40px;height:40px}
+            .modal-next{right:1rem;width:40px;height:40px}
+            .gallery-modal img{max-width:95%;max-height:80vh}
         }
     </style>
 
@@ -554,7 +566,7 @@
         <button class="modal-next" id="modalNext" aria-label="Próxima imagem">
             <i class="fas fa-chevron-right"></i>
         </button>
-        <img src="" alt="Imagem ampliada" id="modalImage">
+        <img alt="Imagem ampliada" id="modalImage">
     </div>
 
     <!-- CSS Async Load Polyfill -->
