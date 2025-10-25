@@ -1,0 +1,22 @@
+HTTrack3.49-5 launched on Wed, 22 Oct 2025 13:56:28 at safeoffshore.com.br
+(httrack safeoffshore.com.br -O /home/luiz-ricardo/projects/safeoffshore/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+14:02:02	Error: 	"Not Found" (404) at link safeoffshore.com.br/images/separator7.png?template=generic (from safeoffshore.com.br/css/style.css)
+14:02:02	Error: 	"Not Found" (404) at link safeoffshore.com.br/images/separator9.png?template=generic (from safeoffshore.com.br/css/style.css)
+14:02:02	Error: 	"Not Found" (404) at link safeoffshore.com.br/images/separator8.png?template=generic (from safeoffshore.com.br/css/style.css)
+14:02:02	Error: 	"Not Found" (404) at link safeoffshore.com.br/images/separator4.png?template=generic (from safeoffshore.com.br/css/style.css)
+14:02:02	Error: 	"Not Found" (404) at link safeoffshore.com.br/images/separator6.png?template=generic (from safeoffshore.com.br/css/style.css)
+14:02:02	Error: 	"Not Found" (404) at link safeoffshore.com.br/images/separator10.png?template=generic (from safeoffshore.com.br/css/style.css)
+14:02:02	Error: 	"Not Found" (404) at link safeoffshore.com.br/images/separator1.png?template=generic (from safeoffshore.com.br/css/style.css)
+14:02:02	Error: 	"Not Found" (404) at link safeoffshore.com.br/images/separator5.png?template=generic (from safeoffshore.com.br/css/style.css)
+14:02:02	Error: 	"Not Found" (404) at link safeoffshore.com.br/images/separator2.png?template=generic (from safeoffshore.com.br/css/style.css)
+14:02:02	Error: 	"Not Found" (404) at link safeoffshore.com.br/images/separator3.png?template=generic (from safeoffshore.com.br/css/style.css)
+14:19:20	Warning: 	Retry after error -4 (Incorrect length (876589 Bytes, 1561370 expected)) at link safeoffshore.com.br/attachments/Slider/5cc636a7-8a23-92dc-adff-ed407c032387/IMG_20170720_082949575.jpg?template=generic (from safeoffshore.com.br/servicos/sinalizacao-nautica/)
+
+HTTrack Website Copier/3.49-5 mirror complete in 23 minutes 4 seconds : 218 links scanned, 206 files written (17270713 bytes overall) [17862916 bytes received at 12906 bytes/sec], 617783 bytes transferred using HTTP compression in 106 files, ratio 32%
+(10 errors, 1 warnings, 0 messages)
