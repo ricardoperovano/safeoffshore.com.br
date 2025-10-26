@@ -95,7 +95,7 @@
         .modal-close{top:2rem;right:2rem}
         .modal-prev{left:2rem;top:50%;transform:translateY(-50%)}
         .modal-next{right:2rem;top:50%;transform:translateY(-50%)}
-        .modal-close .icon,.modal-prev .icon,.modal-next .icon{font-size:1.2rem;color:var(--primary-color)}
+        .modal-close .icon,.modal-prev .icon,.modal-next .icon{width:1.2rem;height:1.2rem;color:var(--primary-color)}
         @media(max-width:768px){
             .nav-menu{display:none;position:fixed;top:80px;left:0;right:0;background:var(--bg-white);flex-direction:column;padding:2rem;box-shadow:var(--shadow-md);gap:0;max-height:calc(100vh - 80px);overflow-y:auto}
             .nav-menu.active{display:flex}
@@ -117,6 +117,7 @@
             .modal-close{top:1rem;right:1rem;width:40px;height:40px}
             .modal-prev{left:1rem;width:40px;height:40px}
             .modal-next{right:1rem;width:40px;height:40px}
+            .modal-close .icon,.modal-prev .icon,.modal-next .icon{width:1rem;height:1rem}
             .gallery-modal img{max-width:95%;max-height:80vh}
         }
     </style>
