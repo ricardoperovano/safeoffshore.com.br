@@ -186,6 +186,12 @@ ul {
     transform: translateY(0);
 }
 
+.dropdown-toggle .icon {
+    width: 0.75rem;
+    height: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
 .dropdown-menu li {
     width: 100%;
 }
@@ -487,7 +493,11 @@ section {
     align-items: center;
     justify-content: center;
     color: var(--text-light);
-    font-size: 2rem;
+}
+
+.feature-icon .icon {
+    width: 2rem;
+    height: 2rem;
 }
 
 .feature-card h3 {
@@ -553,9 +563,13 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.8rem;
     margin-bottom: 1rem;
     transition: var(--transition-normal);
+}
+
+.service-icon .icon {
+    width: 1.8rem;
+    height: 1.8rem;
 }
 
 .service-card:hover .service-icon {
@@ -583,6 +597,11 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.service-link .icon {
+    width: 0.9rem;
+    height: 0.9rem;
 }
 
 .service-link:hover {
@@ -631,9 +650,10 @@ section {
     transition: var(--transition-normal);
 }
 
-.gallery-overlay i {
+.gallery-overlay .icon {
     color: var(--text-light);
-    font-size: 3rem;
+    width: 3rem;
+    height: 3rem;
     transform: scale(0);
     transition: var(--transition-normal);
 }
@@ -646,7 +666,7 @@ section {
     opacity: 1;
 }
 
-.gallery-item:hover .gallery-overlay i {
+.gallery-item:hover .gallery-overlay .icon {
     transform: scale(1);
 }
 
@@ -734,8 +754,10 @@ section {
     gap: 0.5rem;
 }
 
-.footer-contact i {
+.footer-contact .icon {
     color: var(--secondary-color);
+    width: 1.2rem;
+    height: 1.2rem;
 }
 
 .footer-bottom {
@@ -759,13 +781,17 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
     cursor: pointer;
     opacity: 0;
     visibility: hidden;
     transition: var(--transition-normal);
     z-index: 999;
     box-shadow: var(--shadow-lg);
+}
+
+.back-to-top .icon {
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .back-to-top.show {
@@ -981,7 +1007,11 @@ section {
     align-items: center;
     justify-content: center;
     color: var(--text-light);
-    font-size: 2.5rem;
+}
+
+.value-icon .icon {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .value-card h3 {
@@ -1026,9 +1056,10 @@ section {
     transform: translateX(5px);
 }
 
-.differential-item i {
+.differential-item .icon {
     color: var(--primary-color);
-    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
     flex-shrink: 0;
 }
 
@@ -1151,9 +1182,10 @@ section {
     transform: translateY(-5px);
 }
 
-.highlight-item i {
+.highlight-item .icon {
     color: var(--primary-color);
-    font-size: 2rem;
+    width: 2rem;
+    height: 2rem;
     flex-shrink: 0;
 }
 
@@ -1344,8 +1376,12 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.3rem;
     flex-shrink: 0;
+}
+
+.contact-icon .icon {
+    width: 1.3rem;
+    height: 1.3rem;
 }
 
 .contact-details h3 {
@@ -1565,6 +1601,10 @@ section {
 
     .dropdown.active .dropdown-menu {
         display: block;
+    }
+
+    .dropdown.active .dropdown-toggle .icon {
+        transform: rotate(180deg);
     }
 
     .dropdown-menu li {
