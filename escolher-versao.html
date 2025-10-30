@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Offshore - Escolher Versão</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+
+        .versions {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .version-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .version-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .version-card.v2::before {
+            background: linear-gradient(90deg, #1a2e4a 0%, #ff6b35 100%);
+        }
+
+        .version-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .version-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .version-card:not(.v2) .version-tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .version-card.v2 .version-tag {
+            background: linear-gradient(135deg, #1a2e4a 0%, #2c5f8d 100%);
+            color: white;
+        }
+
+        .version-card.v2 .version-tag::after {
+            content: ' 🆕';
+        }
+
+        h2 {
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .description {
+            color: #5a6c7d;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .features li {
+            padding: 0.5rem 0;
+            color: #5a6c7d;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .features li::before {
+            content: '✓';
+            color: #4caf50;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .version-card.v2 .btn {
+            background: linear-gradient(135deg, #1a2e4a 0%, #2c5f8d 100%);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .color-preview {
+            display: flex;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .color-box {
+            width: 40px;
+            height: 40px;
+            border-radius: 6px;
+            border: 2px solid rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .versions {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚢 Safe Offshore</h1>
+        <p class="subtitle">Escolha a versão do site que deseja visualizar</p>
+
+        <div class="versions">
+            <!-- Versão Original -->
+            <div class="version-card">
+                <span class="version-tag">Versão Original</span>
+                <h2>Design Moderno</h2>
+                <p class="description">
+                    Visual vibrante e contemporâneo, ideal para um público amplo.
+                    Design amigável com cores vivas e elementos modernos.
+                </p>
+
+                <div class="color-preview">
+                    <div class="color-box" style="background: #0066cc;"></div>
+                    <div class="color-box" style="background: #00a8e8;"></div>
+                    <div class="color-box" style="background: #ff6b35;"></div>
+                </div>
+
+                <ul class="features">
+                    <li>Cores vibrantes e modernas</li>
+                    <li>Botões arredondados</li>
+                    <li>Design amigável</li>
+                    <li>Animações dinâmicas</li>
+                </ul>
+
+                <a href="/" class="btn">Ver Versão Original</a>
+            </div>
+
+            <!-- Versão 2 - ShipMarine Inspired -->
+            <div class="version-card v2">
+                <span class="version-tag">Versão 2</span>
+                <h2>Design Corporativo</h2>
+                <p class="description">
+                    Inspirado no ShipMarine. Visual profissional e corporativo,
+                    ideal para clientes B2B e imagem empresarial.
+                </p>
+
+                <div class="color-preview">
+                    <div class="color-box" style="background: #1a2e4a;"></div>
+                    <div class="color-box" style="background: #2c5f8d;"></div>
+                    <div class="color-box" style="background: #ff6b35;"></div>
+                </div>
+
+                <ul class="features">
+                    <li>Navy blue profissional</li>
+                    <li>Estilo corporativo</li>
+                    <li>Design empresarial</li>
+                    <li>Navegação elegante</li>
+                </ul>
+
+                <a href="/" class="btn">Ver Versão 2</a>
+            </div>
+
+            <!-- Versão 3 - Enhanced with Stats -->
+            <div class="version-card v2">
+                <span class="version-tag">Versão 3</span>
+                <h2>Split Screen Hero</h2>
+                <p class="description">
+                    Hero moderno com split screen, estatísticas destacadas e elementos visuais diferenciados. Design impactante.
+                </p>
+
+                <div class="color-preview">
+                    <div class="color-box" style="background: #1a2e4a;"></div>
+                    <div class="color-box" style="background: #ff6b35;"></div>
+                    <div class="color-box" style="background: #4a90c7;"></div>
+                </div>
+
+                <ul class="features">
+                    <li>Hero split screen</li>
+                    <li>Estatísticas em destaque</li>
+                    <li>Layout moderno</li>
+                    <li>Visual impactante</li>
+                </ul>
+
+                <a href="index-v3.html" class="btn">Ver Versão 3 (Nova)</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

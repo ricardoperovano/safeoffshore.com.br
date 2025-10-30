@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agulha Magnética e Barômetro - Safe Offshore</title>
+    <link rel="icon" type="image/png" href="../../attachments/Logo/LOGO-01T-PNG.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/shipmarine-style.css">
+</head>
+<body>
+    <!-- SVG Icons Sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="icon-anchor" viewBox="0 0 576 512"><path d="M352 176c0-26.5-21.5-48-48-48h-56v-64h56c8.8 0 16-7.2 16-16s-7.2-16-16-16h-56V16c0-8.8-7.2-16-16-16s-16 7.2-16 16v16h-56c-8.8 0-16 7.2-16 16s7.2 16 16 16h56v64h-56c-26.5 0-48 21.5-48 48v80h32v-80c0-8.8 7.2-16 16-16h128c8.8 0 16 7.2 16 16v80h32v-80zm128 256H96c-8.8 0-16 7.2-16 16s7.2 16 16 16h384c8.8 0 16-7.2 16-16s-7.2-16-16-16zM288 192c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 160c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64z"/></symbol>
+        <symbol id="icon-chevron-down" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></symbol>
+        <symbol id="icon-chevron-left" viewBox="0 0 320 512"><path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"/></symbol>
+        <symbol id="icon-chevron-right" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></symbol>
+        <symbol id="icon-chevron-up" viewBox="0 0 448 512"><path d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"/></symbol>
+        <symbol id="icon-times" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></symbol>
+        <symbol id="icon-search-plus" viewBox="0 0 512 512"><path d="M304 192v32c0 6.6-5.4 12-12 12h-56v56c0 6.6-5.4 12-12 12h-32c-6.6 0-12-5.4-12-12v-56h-56c-6.6 0-12-5.4-12-12v-32c0-6.6 5.4-12 12-12h56v-56c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v56h56c6.6 0 12 5.4 12 12zm201 284.7L476.7 505c-9.4 9.4-24.6 9.4-33.9 0L343 405.3c-4.5-4.5-7-10.6-7-17V372c-35.3 27.6-79.7 44-128 44C93.1 416 0 322.9 0 208S93.1 0 208 0s208 93.1 208 208c0 48.3-16.4 92.7-44 128h16.3c6.4 0 12.5 2.5 17 7l99.7 99.7c9.3 9.4 9.3 24.6 0 34zM344 208c0-75.2-60.8-136-136-136S72 132.8 72 208s60.8 136 136 136 136-60.8 136-136z"/></symbol>
+        <symbol id="icon-arrow-right" viewBox="0 0 448 512"><path d="M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"/></symbol>
+        <symbol id="icon-shield-alt" viewBox="0 0 512 512"><path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256 446.5V62.5l176.1 73.4C426 241 377 361 256 446.5z"/></symbol>
+        <symbol id="icon-leaf" viewBox="0 0 576 512"><path d="M546.2 9.7c-5.6-12.5-21.6-13-28.3-1.2C486.9 62.4 431.4 96 368 96h-80C182 96 96 182 96 288c0 7 .8 13.7 1.5 20.5C161.3 262.8 253.4 224 384 224c8.8 0 16 7.2 16 16s-7.2 16-16 16C132.6 256 26 410.1 2.4 468c-6.6 16.3 1.2 34.9 17.5 41.6 16.4 6.8 35-1.1 41.8-17.3 1.5-3.6 20.9-47.9 71.9-90.6 32.4 43.9 94 85.8 174.9 77.2C465.5 467.5 576 326.7 576 154.3c0-50.2-10.8-102.2-29.8-144.6z"/></symbol>
+        <symbol id="icon-check-circle" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol>
+        <symbol id="icon-water" viewBox="0 0 576 512"><path d="M562.1 383.9c-21.5-2.4-42.1-10.5-57.9-22.9-14.1-11.1-34.2-11.3-48.2 0-37.9 30.4-107.2 30.4-145.7-1.5-13.5-11.2-33-9.1-46.7 1.8-38 30.1-106.9 30-145.2-1.7-13.5-11.2-33.3-8.9-47.1 2-15.5 12.2-36 20.1-57.7 22.4-7.9.8-13.6 7.8-13.6 15.7v32.2c0 9.1 7.6 16.8 16.7 16 28.8-2.5 56.1-11.4 79.4-25.9 56.5 34.6 137 34.1 192 0 56.5 34.6 137 34.1 192 0 23.3 14.2 50.9 23.3 79.1 25.8 9.1.8 16.7-6.9 16.7-16v-31.6c.1-8-5.7-15.4-13.8-16.3zm0-144c-21.5-2.4-42.1-10.5-57.9-22.9-14.1-11.1-34.2-11.3-48.2 0-37.9 30.4-107.2 30.4-145.7-1.5-13.5-11.2-33-9.1-46.7 1.8-38 30.1-106.9 30-145.2-1.7-13.5-11.2-33.3-8.9-47.1 2-15.5 12.2-36 20.1-57.7 22.4-7.9.8-13.6 7.8-13.6 15.7v32.2c0 9.1 7.6 16.8 16.7 16 28.8-2.5 56.1-11.4 79.4-25.9 56.5 34.6 137 34.1 192 0 56.5 34.6 137 34.1 192 0 23.3 14.2 50.9 23.3 79.1 25.8 9.1.8 16.7-6.9 16.7-16v-31.6c.1-8-5.7-15.4-13.8-16.3zm0-144C540.6 93.4 520 85.4 504.2 73 490.1 61.9 470 61.7 456 73c-37.9 30.4-107.2 30.4-145.7-1.5-13.5-11.2-33-9.1-46.7 1.8-38 30.1-106.9 30-145.2-1.7-13.5-11.2-33.3-8.9-47.1 2-15.5 12.2-36 20.1-57.7 22.4-7.9.8-13.6 7.8-13.6 15.7v32.2c0 9.1 7.6 16.8 16.7 16 28.8-2.5 56.1-11.4 79.4-25.9 56.5 34.6 137 34.1 192 0 56.5 34.6 137 34.1 192 0 23.3 14.2 50.9 23.3 79.1 25.8 9.1.8 16.7-6.9 16.7-16v-31.6c.1-8-5.7-15.4-13.8-16.3z"/></symbol>
+        <symbol id="icon-lighthouse" viewBox="0 0 640 512"><path d="M288 0v128L176.1 287.4c-3 4.3-4.6 9.4-4.6 14.6V512h96v-64h105v64h96V302c0-5.2-1.6-10.3-4.6-14.6L352 128V0h-64zm175 240l-47 67.1V448h-48v-64H272v64h-48V307.1L177 240h286zM288 448v64h64v-64h-64zm224-256h128l-64-128-64 128zm-128 0H256L320 64l64 128zm-192 0l-64-128L64 192h128z"/></symbol>
+        <symbol id="icon-compass" viewBox="0 0 496 512"><path d="M225.38 233.37c-12.5 12.5-12.5 32.76 0 45.25 12.49 12.5 32.76 12.5 45.25 0 12.5-12.5 12.5-32.76 0-45.25-12.5-12.49-32.76-12.49-45.25 0zM248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm126.14 148.05L308.17 300.4a31.938 31.938 0 0 1-15.77 15.77l-144.34 65.97c-16.65 7.61-33.81-9.55-26.2-26.2l65.98-144.35a31.938 31.938 0 0 1 15.77-15.77l144.34-65.97c16.65-7.6 33.8 9.55 26.19 26.2z"/></symbol>
+        <symbol id="icon-bolt" viewBox="0 0 320 512"><path d="M296 160H180.6l42.6-129.8C227.2 15 215.7 0 200 0H56C44 0 33.8 8.9 32.2 20.8l-32 240C-1.7 275.2 9.5 288 24 288h118.7L96.6 482.5c-3.6 15.2 8 29.5 23.3 29.5 8.4 0 16.4-4.4 20.8-12l176-304c10.3-17.8-1.3-40-23.3-40z"/></symbol>
+        <symbol id="icon-mountain" viewBox="0 0 640 512"><path d="M634.92 462.7l-288-448C341.03 5.54 330.89 0 320 0s-21.03 5.54-26.92 14.7l-288 448a32.001 32.001 0 0 0-1.17 32.64A32.004 32.004 0 0 0 32 512h576c11.71 0 22.48-6.39 28.09-16.67a31.99 31.99 0 0 0-1.17-32.63zM320 91.18L405.39 224H320l-64 64-38.06-38.06L320 91.18z"/></symbol>
+        <symbol id="icon-toolbox" viewBox="0 0 512 512"><path d="M502.63 214.63l-45.25-45.25c-6-6-14.14-9.37-22.63-9.37H384V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v80H77.25c-8.49 0-16.62 3.37-22.63 9.37l-45.25 45.25c-6 6-9.37 14.14-9.37 22.63V448c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32V237.25c0-8.48-3.37-16.62-9.37-22.62zM320 240h-32v-48c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v48h-32v-48c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v48H96v-80h320v80h-96v-48c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v48zm16-160H176V64h160v16z"/></symbol>
+        <symbol id="icon-envelope" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></symbol>
+        <symbol id="icon-map-marker-alt" viewBox="0 0 384 512"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></symbol>
+    </svg>
+
+
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="../../index.html" class="logo">
+                        <picture>
+                    <source srcset="../../attachments/Logo/LOGO-01T-PNG.webp" type="image/webp">
+                    <img src="../../attachments/Logo/LOGO-01T-PNG.png" alt="Safe Offshore Logo" >
+                </picture>
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle"><span></span><span></span><span></span></button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="../../index.html">Página Inicial</a></li>
+                        <li><a href="../../about-us/">Quem Somos</a></li>
+                        <li class="dropdown">
+                            <a href="../../servicos/" class="dropdown-toggle active">Serviços <svg class="icon"><use href="#icon-chevron-down"/></svg></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-all-link"><a href="../">📋 Ver Todos os Serviços</a></li>
+                                <li><a href="../../servicos/sinalizacao-nautica/index.html">Sinalização Náutica</a></li>
+                                <li><a href="../../servicos/comercio-de-equipamentos-de-sinalizacao-nautica/index.html">Comércio de Equipamentos</a></li>
+                                <li><a href="../../servicos/apoio-subaquatico/index.html">Apoio Subaquático</a></li>
+                                <li><a href="../../servicos/agulha-magnetica-e-barometro-aneroide/index.html">Agulha Magnética</a></li>
+                                <li><a href="../../servicos/hidreletricas/index.html">Hidrelétricas</a></li>
+                                <li><a href="../../servicos/alpinismo-industrial/index.html">Alpinismo Industrial</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../principais-clientes-1/">Clientes</a></li>
+                        <li><a href="../../contato/">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1 class="page-title">Agulha Magnética e Barômetro</h1>
+            <nav class="breadcrumb">
+                <a href="../../index.html">Home</a>
+                <span class="separator">/</span>
+                <a href="../../servicos/">Serviços</a>
+                <span class="separator">/</span>
+                <span class="current">Agulha Magnética</span>
+            </nav>
+        </div>
+    </section>
+
+    <section class="service-page-section">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-description">
+                    <h3>Agulha Magnética e Barômetro Aneróide</h3>
+<p>Serviços especializados em equipamentos de navegação náutica.</p>
+<ul>
+    <li>Compensação de agulhas magnéticas em navios e plataformas</li>
+    <li>Reparos em agulhas magnéticas</li>
+    <li>Aferição de barômetros aneróides</li>
+    <li>Instalação de equipamentos de navegação</li>
+    <li>Confecção de acessórios que compõem as bitáculas</li>
+    <li>Manutenção preventiva e corretiva</li>
+</ul>
+<h3>Conformidade com Normas</h3>
+<p>Todos os serviços seguem as normas da Marinha do Brasil e organismos internacionais de navegação.</p>
+
+<h3>Certificações e Equipamentos</h3>
+<div class="service-images-grid">
+    <div class="service-image-item">
+        <picture>
+                    <source srcset="../../attachments/Image/certificado_182b7.webp" type="image/webp">
+                    <img src="../../attachments/Image/certificado_182b7.png" alt="Certificado Agulha Magnética" loading="lazy">
+                </picture>
+    </div>
+    <div class="service-image-item">
+        <picture>
+                    <source srcset="../../attachments/Image/certificado82b7.webp" type="image/webp">
+                    <img src="../../attachments/Image/certificado82b7.png" alt="Certificação de Serviços" loading="lazy">
+                </picture>
+    </div>
+    <div class="service-image-item">
+        <picture>
+                    <source srcset="../../attachments/Image/ns-7.5-40082b7.webp" type="image/webp">
+                    <img src="../../attachments/Image/ns-7.5-40082b7.jpg" alt="Equipamento Náutico" loading="lazy">
+                </picture>
+    </div>
+</div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Interessado neste serviço?</h2>
+                <p>Entre em contato e solicite um orçamento personalizado.</p>
+                <div class="cta-buttons">
+                    <a href="../../contato/" class="btn btn-primary">Fale Conosco</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Safe Offshore</h3>
+                    <p>Serviços Marítimos Especializados</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2015-2024 SAFE OFFSHORE Serviços Marítimos Ltda. Todos os Direitos Reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="gallery-modal" id="galleryModal">
+        <button class="modal-close" id="modalClose" aria-label="Fechar">
+            <svg class="icon"><use href="#icon-times"/></svg>
+        </button>
+        <button class="modal-prev" id="modalPrev" aria-label="Imagem anterior">
+            <svg class="icon"><use href="#icon-chevron-left"/></svg>
+        </button>
+        <button class="modal-next" id="modalNext" aria-label="Próxima imagem">
+            <svg class="icon"><use href="#icon-chevron-right"/></svg>
+        </button>
+        <img src="" alt="Imagem ampliada" id="modalImage">
+    </div>
+
+    <button class="back-to-top" id="backToTop"><svg class="icon"><use href="#icon-chevron-up"/></svg></button>
+    <script src="../../js/modern-script.js"></script>
+    <!-- SVG Icons Loaded -->
+    <script>
+        document.documentElement.classList.add('svg-loaded');
+    </script>
+
+</body>
+</html>

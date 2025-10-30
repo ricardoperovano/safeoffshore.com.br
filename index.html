@@ -127,8 +127,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <!-- Full CSS - Async Load -->
-    <link rel="preload" href="css/modern-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/modern-style.css"></noscript>
+    <link rel="preload" href="css/shipmarine-style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/shipmarine-style.css"></noscript>
+    <link rel="stylesheet" href="css/v3-enhanced.css">
 
     <!-- Google Fonts - Async Load -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -181,7 +182,7 @@
         <nav class="navbar">
             <div class="container">
                 <div class="nav-wrapper">
-                    <a href="index.html" class="logo">
+                    <a href="/" class="logo">
                         <picture>
                     <source srcset="attachments/Logo/LOGO-01T-PNG.webp" type="image/webp">
                     <img src="attachments/Logo/LOGO-01T-PNG.png" alt="Safe Offshore Logo" width="325" height="120">
@@ -195,331 +196,430 @@
                     </button>
 
                     <ul class="nav-menu" id="navMenu">
-                        <li><a href="index.html" class="active">Página Inicial</a></li>
-                        <li><a href="about-us/">Quem Somos</a></li>
+                        <li><a href="/" class="active">Página Inicial</a></li>
+                        <li><a href="about-us/index.html">Quem Somos</a></li>
                         <li class="dropdown">
-                            <a href="servicos/" class="dropdown-toggle">
+                            <a href="servicos/index.html" class="dropdown-toggle">
                                 Serviços <svg class="icon"><use href="#icon-chevron-down"/></svg>
                             </a>
                             <ul class="dropdown-menu">
-                                <li class="dropdown-all-link"><a href="servicos/">📋 Ver Todos os Serviços</a></li>
-                                <li><a href="servicos/sinalizacao-nautica/">Sinalização Náutica</a></li>
-                                <li><a href="servicos/comercio-de-equipamentos-de-sinalizacao-nautica/">Comércio de Equipamentos</a></li>
-                                <li><a href="servicos/apoio-subaquatico/">Apoio Subaquático</a></li>
-                                <li><a href="servicos/agulha-magnetica-e-barometro-aneroide/">Agulha Magnética</a></li>
-                                <li><a href="servicos/hidreletricas/">Hidrelétricas</a></li>
-                                <li><a href="servicos/alpinismo-industrial/">Alpinismo Industrial</a></li>
+                                <li class="dropdown-all-link"><a href="servicos/index.html">📋 Ver Todos os Serviços</a></li>
+                                <li><a href="servicos/sinalizacao-nautica/index.html">Sinalização Náutica</a></li>
+                                <li><a href="servicos/comercio-de-equipamentos-de-sinalizacao-nautica/index.html">Comércio de Equipamentos</a></li>
+                                <li><a href="servicos/apoio-subaquatico/index.html">Apoio Subaquático</a></li>
+                                <li><a href="servicos/agulha-magnetica-e-barometro-aneroide/index.html">Agulha Magnética</a></li>
+                                <li><a href="servicos/hidreletricas/index.html">Hidrelétricas</a></li>
+                                <li><a href="servicos/alpinismo-industrial/index.html">Alpinismo Industrial</a></li>
                             </ul>
                         </li>
-                        <li><a href="principais-clientes-1/">Clientes</a></li>
-                        <li><a href="contato/">Contato</a></li>
+                        <li><a href="principais-clientes-1/index.html">Clientes</a></li>
+                        <li><a href="contato/index.html">Contato</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-slider" id="heroSlider">
-            <div class="slide active">
-                <picture>
-                    <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.webp" type="image/webp">
-                    <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.jpg" alt="Serviços Marítimos Safe Offshore" fetchpriority="high" width="1280" height="721">
-                </picture>
-                <div class="slide-overlay"></div>
-            </div>
-            <div class="slide">
-                <picture>
-                    <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.webp" type="image/webp">
-                    <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.jpg" alt="Sinalização Náutica" width="640" height="480">
-                </picture>
-                <div class="slide-overlay"></div>
-            </div>
-            <div class="slide">
-                <picture>
-                    <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.webp" type="image/webp">
-                    <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.jpg" alt="Apoio Subaquático" width="1920" height="1080">
-                </picture>
-                <div class="slide-overlay"></div>
-            </div>
-            <div class="slide">
-                <picture>
-                    <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_091050303.webp" type="image/webp">
-                    <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_091050303.jpg" alt="Mergulho Profissional" width="1920" height="1080">
-                </picture>
-                <div class="slide-overlay"></div>
-            </div>
-            <div class="slide">
-                <picture>
-                    <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170718_084453843.webp" type="image/webp">
-                    <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170718_084453843.jpg" alt="Balizamento Náutico" width="1920" height="1080">
-                </picture>
-                <div class="slide-overlay"></div>
-            </div>
-        </div>
-
-        <div class="hero-content">
-            <div class="container">
-                <h1 class="hero-title">Safe Offshore</h1>
-                <p class="hero-subtitle">Serviços Marítimos Especializados</p>
-                <p class="hero-description">Excelência em sinalização náutica, balizamento e apoio subaquático</p>
+    <!-- Hero Section V3 - Split Screen with Stats -->
+    <section class="hero-v3">
+        <div class="hero-v3-content">
+            <div class="hero-v3-text">
+                <h1>Navegando com <span class="highlight">Excelência</span> e Segurança</h1>
+                <p>Mais de uma década oferecendo soluções completas em serviços marítimos, sinalização náutica e apoio subaquático para os principais portos do Brasil.</p>
                 <div class="hero-buttons">
-                    <a href="servicos/" class="btn btn-primary">Nossos Serviços</a>
-                    <a href="contato/" class="btn btn-secondary">Entre em Contato</a>
+                    <a href="servicos/index.html" class="btn btn-primary">Nossos Serviços</a>
+                    <a href="contato/index.html" class="btn btn-secondary">Fale Conosco</a>
+                </div>
+
+                <!-- Statistics -->
+                <div class="hero-v3-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Projetos Concluídos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Satisfação</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slider Controls -->
-        <button class="slider-control prev" id="prevSlide" aria-label="Slide anterior">
-            <svg class="icon"><use href="#icon-chevron-left"/></svg>
-        </button>
-        <button class="slider-control next" id="nextSlide" aria-label="Próximo slide">
-            <svg class="icon"><use href="#icon-chevron-right"/></svg>
-        </button>
-
-        <div class="slider-dots" id="sliderDots"></div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about-section" id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Sobre a Safe Offshore</h2>
-                <div class="title-underline"></div>
-            </div>
-
-            <div class="about-content">
-                <div class="about-text">
-                    <p>A <strong>SAFE OFFSHORE Serviços Marítimos</strong>, é uma empresa Capixaba especializada em gerenciamento, estabelecimento, manutenção e operação de Equipamento de sinalização náutica, elaboração de projetos provisórios e definitivos de balizamento náutico.</p>
-
-                    <p>Instalação de equipamentos de navegação e confecção de acessórios que compõem as bitáculas das agulhas magnéticas nos navios e plataformas.</p>
-
-                    <p>Gerenciamento, consultoria e apoio subaquático em obras de engenharia Portuárias e reparos navais.</p>
-
-                    <p>Trabalhando sempre com o objetivo de atingir a satisfação do cliente, proporcionando eficácia, cumprimento dos prazos, flexibilização dos preços e compromisso com a segurança no trabalho e o meio ambiente.</p>
-                </div>
-
-                <div class="about-features">
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg class="icon"><use href="#icon-anchor"/></svg>
-                        </div>
-                        <h3>Experiência</h3>
-                        <p>Anos de atuação no setor marítimo</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg class="icon"><use href="#icon-shield-alt"/></svg>
-                        </div>
-                        <h3>Segurança</h3>
-                        <p>Compromisso com segurança do trabalho</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg class="icon"><use href="#icon-leaf"/></svg>
-                        </div>
-                        <h3>Meio Ambiente</h3>
-                        <p>Respeito e preservação ambiental</p>
-                    </div>
-
-                    <div class="feature-card">
-                        <div class="feature-icon">
-                            <svg class="icon"><use href="#icon-check-circle"/></svg>
-                        </div>
-                        <h3>Qualidade</h3>
-                        <p>Excelência e satisfação do cliente</p>
-                    </div>
-                </div>
-            </div>
+        <div class="hero-v3-image">
+            <picture>
+                <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.webp" type="image/webp">
+                <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.jpg" alt="Serviços Marítimos Safe Offshore" fetchpriority="high">
+            </picture>
         </div>
     </section>
 
-    <!-- Services Preview Section -->
-    <section class="services-preview">
+
+    <!-- Services Section V3 -->
+    <section class="services-section" style="padding: var(--spacing-lg) 0;">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Nossos Serviços</h2>
                 <div class="title-underline"></div>
+                <p class="section-subtitle">Soluções completas em serviços marítimos com excelência e segurança</p>
             </div>
 
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg class="icon"><use href="#icon-lighthouse"/></svg>
+            <div class="services-grid-v3">
+                <div class="service-card-v3">
+                    <div class="service-card-v3-image">
+                        <picture>
+                            <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.webp" type="image/webp">
+                            <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.jpg" alt="Sinalização Náutica">
+                        </picture>
                     </div>
-                    <h3>Sinalização Náutica</h3>
-                    <p>Gerenciamento e manutenção de equipamentos de sinalização náutica e balizamento.</p>
-                    <a href="servicos/sinalizacao-nautica/" class="service-link">Saiba mais <svg class="icon"><use href="#icon-arrow-right"/></svg></a>
+                    <div class="service-card-v3-content">
+                        <div class="service-card-v3-icon">
+                            <svg class="icon"><use href="#icon-lighthouse"/></svg>
+                        </div>
+                        <h3>Sinalização Náutica</h3>
+                        <p>Gerenciamento, estabelecimento e manutenção de equipamentos de sinalização náutica e balizamento.</p>
+                        <a href="servicos/sinalizacao-nautica/index.html" class="btn btn-primary">Saiba Mais</a>
+                    </div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg class="icon"><use href="#icon-water"/></svg>
+                <div class="service-card-v3">
+                    <div class="service-card-v3-image">
+                        <picture>
+                            <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.webp" type="image/webp">
+                            <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.jpg" alt="Apoio Subaquático">
+                        </picture>
                     </div>
-                    <h3>Apoio Subaquático</h3>
-                    <p>Consultoria e serviços de mergulho profissional para obras portuárias e reparos navais.</p>
-                    <a href="servicos/apoio-subaquatico/" class="service-link">Saiba mais <svg class="icon"><use href="#icon-arrow-right"/></svg></a>
+                    <div class="service-card-v3-content">
+                        <div class="service-card-v3-icon">
+                            <svg class="icon"><use href="#icon-water"/></svg>
+                        </div>
+                        <h3>Apoio Subaquático</h3>
+                        <p>Consultoria e apoio subaquático em obras de engenharia portuárias e reparos navais.</p>
+                        <a href="servicos/apoio-subaquatico/index.html" class="btn btn-primary">Saiba Mais</a>
+                    </div>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg class="icon"><use href="#icon-compass"/></svg>
+                <div class="service-card-v3">
+                    <div class="service-card-v3-image">
+                        <picture>
+                            <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170718_084453843.webp" type="image/webp">
+                            <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170718_084453843.jpg" alt="Agulha Magnética">
+                        </picture>
                     </div>
-                    <h3>Agulha Magnética</h3>
-                    <p>Instalação e calibração de agulhas magnéticas e barômetros aneroides.</p>
-                    <a href="servicos/agulha-magnetica-e-barometro-aneroide/" class="service-link">Saiba mais <svg class="icon"><use href="#icon-arrow-right"/></svg></a>
+                    <div class="service-card-v3-content">
+                        <div class="service-card-v3-icon">
+                            <svg class="icon"><use href="#icon-compass"/></svg>
+                        </div>
+                        <h3>Agulha Magnética</h3>
+                        <p>Instalação de equipamentos de navegação e confecção de acessórios para bitáculas.</p>
+                        <a href="servicos/agulha-magnetica-e-barometro-aneroide/index.html" class="btn btn-primary">Saiba Mais</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Stats Section -->
+    <section class="company-stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <div class="stat-box-icon">
+                        <svg class="icon"><use href="#icon-anchor"/></svg>
+                    </div>
+                    <span class="stat-box-number">500+</span>
+                    <span class="stat-box-label">Projetos Realizados</span>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="stat-box">
+                    <div class="stat-box-icon">
+                        <svg class="icon"><use href="#icon-users"/></svg>
+                    </div>
+                    <span class="stat-box-number">100+</span>
+                    <span class="stat-box-label">Clientes Atendidos</span>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-box-icon">
+                        <svg class="icon"><use href="#icon-check-circle"/></svg>
+                    </div>
+                    <span class="stat-box-number">100%</span>
+                    <span class="stat-box-label">Satisfação</span>
+                </div>
+
+                <div class="stat-box">
+                    <div class="stat-box-icon">
+                        <svg class="icon"><use href="#icon-hard-hat"/></svg>
+                    </div>
+                    <span class="stat-box-number">10+</span>
+                    <span class="stat-box-label">Anos de Experiência</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section V3 -->
+    <section class="about-section-v3" style="padding: var(--spacing-lg) 0;">
+        <div class="container">
+            <div class="about-content-v3">
+                <div class="about-image-v3">
+                    <picture>
+                        <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.webp" type="image/webp">
+                        <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.jpg" alt="Safe Offshore">
+                    </picture>
+                </div>
+
+                <div class="about-text-v3">
+                    <h2>Sobre a Safe Offshore</h2>
+                    <p>A <strong>SAFE OFFSHORE Serviços Marítimos</strong> é uma empresa Capixaba especializada em gerenciamento, estabelecimento, manutenção e operação de equipamentos de sinalização náutica.</p>
+
+                    <p>Trabalhamos com elaboração de projetos provisórios e definitivos de balizamento náutico, instalação de equipamentos de navegação e confecção de acessórios que compõem as bitáculas das agulhas magnéticas.</p>
+
+                    <div class="about-features-v3">
+                        <div class="feature-item-v3">
+                            <div class="feature-item-v3-icon">
+                                <svg class="icon"><use href="#icon-check-circle"/></svg>
+                            </div>
+                            <div>
+                                <h4>Qualidade Certificada</h4>
+                                <p>Processos certificados e conformes com normas marítimas</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item-v3">
+                            <div class="feature-item-v3-icon">
+                                <svg class="icon"><use href="#icon-toolbox"/></svg>
+                            </div>
+                            <div>
+                                <h4>Equipamentos Modernos</h4>
+                                <p>Tecnologia de ponta para serviços de excelência</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item-v3">
+                            <div class="feature-item-v3-icon">
+                                <svg class="icon"><use href="#icon-anchor"/></svg>
+                            </div>
+                            <div>
+                                <h4>Equipe Especializada</h4>
+                                <p>Profissionais qualificados e experientes</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-item-v3">
+                            <div class="feature-item-v3-icon">
+                                <svg class="icon"><use href="#icon-leaf"/></svg>
+                            </div>
+                            <div>
+                                <h4>Sustentabilidade</h4>
+                                <p>Compromisso com o meio ambiente marinho</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="about-us/index.html" class="btn btn-primary" style="margin-top: 2rem;">Conheça Nossa História</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-us-section" style="padding: var(--spacing-lg) 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Por Que Escolher a Safe Offshore?</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Diferenciais que nos tornam referência no setor marítimo</p>
+            </div>
+
+            <div class="why-us-grid">
+                <div class="why-us-card">
+                    <div class="why-us-icon">
+                        <svg class="icon"><use href="#icon-shield-alt"/></svg>
+                    </div>
+                    <h3>Segurança Total</h3>
+                    <p>Rigorosos padrões de segurança em todas as operações, garantindo a integridade de nossa equipe e do meio ambiente marinho.</p>
+                </div>
+
+                <div class="why-us-card">
+                    <div class="why-us-icon">
                         <svg class="icon"><use href="#icon-bolt"/></svg>
                     </div>
-                    <h3>Hidrelétricas</h3>
-                    <p>Serviços especializados para usinas hidrelétricas e infraestrutura energética.</p>
-                    <a href="servicos/hidreletricas/" class="service-link">Saiba mais <svg class="icon"><use href="#icon-arrow-right"/></svg></a>
+                    <h3>Agilidade</h3>
+                    <p>Resposta rápida e eficiente para atender às demandas do setor marítimo com prazos cumpridos e qualidade garantida.</p>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <svg class="icon"><use href="#icon-mountain"/></svg>
-                    </div>
-                    <h3>Alpinismo Industrial</h3>
-                    <p>Trabalhos em altura com técnicas de alpinismo industrial certificadas.</p>
-                    <a href="servicos/alpinismo-industrial/" class="service-link">Saiba mais <svg class="icon"><use href="#icon-arrow-right"/></svg></a>
-                </div>
-
-                <div class="service-card">
-                    <div class="service-icon">
+                <div class="why-us-card">
+                    <div class="why-us-icon">
                         <svg class="icon"><use href="#icon-toolbox"/></svg>
                     </div>
-                    <h3>Comércio de Equipamentos</h3>
-                    <p>Venda de equipamentos especializados para sinalização náutica.</p>
-                    <a href="servicos/comercio-de-equipamentos-de-sinalizacao-nautica/" class="service-link">Saiba mais <svg class="icon"><use href="#icon-arrow-right"/></svg></a>
+                    <h3>Expertise Técnica</h3>
+                    <p>Equipe altamente qualificada com vasta experiência em projetos complexos de sinalização náutica e apoio subaquático.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="gallery-section" id="gallery">
+    <!-- Process Section -->
+    <section class="process-section" style="padding: var(--spacing-lg) 0;">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Galeria de Imagens</h2>
+                <h2 class="section-title">Como Trabalhamos</h2>
                 <div class="title-underline"></div>
+                <p class="section-subtitle">Processo estruturado para garantir resultados excepcionais</p>
             </div>
 
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <picture>
-                    <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.webp" type="image/webp">
-                    <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.jpg" alt="Serviços Marítimos Safe Offshore" loading="lazy" width="1280" height="721">
-                </picture>
-                    <div class="gallery-overlay">
-                        <svg class="icon"><use href="#icon-search-plus"/></svg>
-                    </div>
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step-number">1</div>
+                    <h3>Análise</h3>
+                    <p>Avaliação detalhada das necessidades e especificações do projeto</p>
                 </div>
 
-                <div class="gallery-item">
-                    <picture>
-                    <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.webp" type="image/webp">
-                    <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.jpg" alt="Sinalização Náutica" loading="lazy" width="640" height="480">
-                </picture>
-                    <div class="gallery-overlay">
-                        <svg class="icon"><use href="#icon-search-plus"/></svg>
-                    </div>
+                <div class="process-step">
+                    <div class="process-step-number">2</div>
+                    <h3>Planejamento</h3>
+                    <p>Desenvolvimento de estratégias e cronogramas personalizados</p>
                 </div>
 
-                <div class="gallery-item">
-                    <picture>
-                    <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.webp" type="image/webp">
-                    <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.jpg" alt="Apoio Subaquático" loading="lazy" width="1920" height="1080">
-                </picture>
-                    <div class="gallery-overlay">
-                        <svg class="icon"><use href="#icon-search-plus"/></svg>
-                    </div>
+                <div class="process-step">
+                    <div class="process-step-number">3</div>
+                    <h3>Execução</h3>
+                    <p>Implementação com equipe especializada e equipamentos modernos</p>
                 </div>
 
-                <div class="gallery-item">
-                    <picture>
-                    <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_091050303.webp" type="image/webp">
-                    <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_091050303.jpg" alt="Mergulho Profissional" loading="lazy" width="1920" height="1080">
-                </picture>
-                    <div class="gallery-overlay">
-                        <svg class="icon"><use href="#icon-search-plus"/></svg>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <picture>
-                    <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170718_084453843.webp" type="image/webp">
-                    <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170718_084453843.jpg" alt="Balizamento Náutico" loading="lazy" width="1920" height="1080">
-                </picture>
-                    <div class="gallery-overlay">
-                        <svg class="icon"><use href="#icon-search-plus"/></svg>
-                    </div>
-                </div>
-
-                <div class="gallery-item">
-                    <picture>
-                    <source srcset="attachments/Image/bandeira_mergulho_1.webp" type="image/webp">
-                    <img src="attachments/Image/bandeira_mergulho_1.jpg" alt="Bandeira de Mergulho" loading="lazy" width="563" height="358">
-                </picture>
-                    <div class="gallery-overlay">
-                        <svg class="icon"><use href="#icon-search-plus"/></svg>
-                    </div>
+                <div class="process-step">
+                    <div class="process-step-number">4</div>
+                    <h3>Entrega</h3>
+                    <p>Conclusão com qualidade, dentro do prazo e acompanhamento pós-serviço</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Important Links Sidebar (converted to section) -->
-    <section class="links-section">
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" style="padding: var(--spacing-lg) 0;">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Links Importantes</h2>
+                <h2 class="section-title">Projetos Realizados</h2>
                 <div class="title-underline"></div>
+                <p class="section-subtitle">Confira alguns dos nossos trabalhos</p>
             </div>
 
-            <div class="links-grid">
-                <a href="http://www.praticagem.org.br/index2.asp" target="_blank" rel="noopener noreferrer" class="link-card">
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
                     <picture>
-                    <source srcset="attachments/Image/logomarca_1.webp" type="image/webp">
-                    <img src="attachments/Image/logomarca_1.gif" alt="Praticagem" width="120" height="174">
-                </picture>
-                    <p>Praticagem</p>
-                </a>
-
-                <a href="https://www.mar.mil.br/dhn/camr/camr.html" target="_blank" rel="noopener noreferrer" class="link-card">
-                    <picture>
-                    <source srcset="attachments/Image/distcamr_1.webp" type="image/webp">
-                    <img src="attachments/Image/distcamr_1.gif" alt="Marinha do Brasil - CAMR" width="74" height="108">
-                </picture>
-                    <p>Marinha - CAMR</p>
-                </a>
-
-                <div class="link-card">
-                    <picture>
-                    <source srcset="attachments/Image/download.webp" type="image/webp">
-                    <img src="attachments/Image/download.png" alt="Certificação" width="297" height="170">
-                </picture>
+                        <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.webp" type="image/webp">
+                        <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.jpg" alt="Projeto">
+                    </picture>
+                    <div class="portfolio-overlay">
+                        <div>
+                            <h3>Sinalização Náutica</h3>
+                            <p>Porto de Vitória - ES</p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="link-card">
+                <div class="portfolio-item">
                     <picture>
-                    <source srcset="attachments/Image/bandeira_mergulho_1.webp" type="image/webp">
-                    <img src="attachments/Image/bandeira_mergulho_1.jpg" alt="Bandeira de Mergulho" width="563" height="358">
-                </picture>
-                    <p>Mergulho Profissional</p>
+                        <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.webp" type="image/webp">
+                        <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.jpg" alt="Projeto">
+                    </picture>
+                    <div class="portfolio-overlay">
+                        <div>
+                            <h3>Balizamento</h3>
+                            <p>Canal de Acesso</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <picture>
+                        <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.webp" type="image/webp">
+                        <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.jpg" alt="Projeto">
+                    </picture>
+                    <div class="portfolio-overlay">
+                        <div>
+                            <h3>Apoio Subaquático</h3>
+                            <p>Inspeção e Manutenção</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Clients Section -->
+    <section class="clients-section-v3" style="padding: var(--spacing-lg) 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossos Clientes</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Empresas que confiam em nossos serviços</p>
+            </div>
+
+            <div class="clients-grid">
+                <div class="client-logo-box">
+                    <picture>
+                        <source srcset="attachments/Image/technip82b7.webp" type="image/webp">
+                        <img src="attachments/Image/technip82b7.jpg" alt="Technip" loading="lazy">
+                    </picture>
+                </div>
+                <div class="client-logo-box">
+                    <picture>
+                        <source srcset="attachments/Image/LOGO-JURONG82b7.webp" type="image/webp">
+                        <img src="attachments/Image/LOGO-JURONG82b7.jpg" alt="Jurong Shipyard" loading="lazy">
+                    </picture>
+                </div>
+                <div class="client-logo-box">
+                    <picture>
+                        <source srcset="attachments/Image/camorim82b7.webp" type="image/webp">
+                        <img src="attachments/Image/camorim82b7.jpg" alt="Camorim" loading="lazy">
+                    </picture>
+                </div>
+                <div class="client-logo-box">
+                    <picture>
+                        <source srcset="attachments/Image/Dratec82b7.webp" type="image/webp">
+                        <img src="attachments/Image/Dratec82b7.jpg" alt="Dratec" loading="lazy">
+                    </picture>
+                </div>
+                <div class="client-logo-box">
+                    <picture>
+                        <source srcset="attachments/Image/jandenul82b7.webp" type="image/webp">
+                        <img src="attachments/Image/jandenul82b7.jpg" alt="Jan De Nul" loading="lazy">
+                    </picture>
+                </div>
+                <div class="client-logo-box">
+                    <picture>
+                        <source srcset="attachments/Image/astromaritima82b7.webp" type="image/webp">
+                        <img src="attachments/Image/astromaritima82b7.jpg" alt="Astro Marítima" loading="lazy">
+                    </picture>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="principais-clientes-1/index.html" class="btn btn-primary">Ver Todos os Clientes</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section-v3">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto para Iniciar Seu Projeto?</h2>
+                <p>Entre em contato conosco e descubra como podemos ajudar sua empresa com soluções marítimas de excelência.</p>
+                <div class="cta-buttons">
+                    <a href="contato/index.html" class="btn btn-primary">Solicite um Orçamento</a>
+                    <a href="servicos/index.html" class="btn btn-secondary">Conheça Nossos Serviços</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -532,22 +632,22 @@
                 <div class="footer-col">
                     <h3>Links Rápidos</h3>
                     <ul>
-                        <li><a href="index.html">Página Inicial</a></li>
-                        <li><a href="about-us/">Quem Somos</a></li>
-                        <li><a href="servicos/">Serviços</a></li>
-                        <li><a href="principais-clientes-1/">Clientes</a></li>
-                        <li><a href="contato/">Contato</a></li>
+                        <li><a href="/">Página Inicial</a></li>
+                        <li><a href="about-us/index.html">Quem Somos</a></li>
+                        <li><a href="servicos/index.html">Serviços</a></li>
+                        <li><a href="principais-clientes-1/index.html">Clientes</a></li>
+                        <li><a href="contato/index.html">Contato</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-col">
                     <h3>Serviços</h3>
                     <ul>
-                        <li><a href="servicos/sinalizacao-nautica/">Sinalização Náutica</a></li>
-                        <li><a href="servicos/apoio-subaquatico/">Apoio Subaquático</a></li>
-                        <li><a href="servicos/agulha-magnetica-e-barometro-aneroide/">Agulha Magnética</a></li>
-                        <li><a href="servicos/hidreletricas/">Hidrelétricas</a></li>
-                        <li><a href="servicos/alpinismo-industrial/">Alpinismo Industrial</a></li>
+                        <li><a href="servicos/sinalizacao-nautica/index.html">Sinalização Náutica</a></li>
+                        <li><a href="servicos/apoio-subaquatico/index.html">Apoio Subaquático</a></li>
+                        <li><a href="servicos/agulha-magnetica-e-barometro-aneroide/index.html">Agulha Magnética</a></li>
+                        <li><a href="servicos/hidreletricas/index.html">Hidrelétricas</a></li>
+                        <li><a href="servicos/alpinismo-industrial/index.html">Alpinismo Industrial</a></li>
                     </ul>
                 </div>
 
@@ -560,7 +660,7 @@
                         </li>
                         <li>
                             <svg class="icon"><use href="#icon-envelope"/></svg>
-                            <a href="contato/">Entre em Contato</a>
+                            <a href="contato/index.html">Entre em Contato</a>
                         </li>
                     </ul>
                 </div>
