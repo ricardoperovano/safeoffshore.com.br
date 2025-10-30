@@ -31,7 +31,7 @@ Esta é a segunda versão do site Safe Offshore, inspirada no design corporativo
 
 ### CSS
 - **`css/modern-style.css`** - Versão original
-- **`css/shipmarine-style.css`** - Nova versão (V2)
+- **`css/safeoffshore-style.css`** - Nova versão (V2)
 
 ### Páginas HTML
 
@@ -89,7 +89,7 @@ Todas as páginas V2 estão interligadas:
 ## 🔧 Manutenção
 
 Para atualizar a Versão 2:
-1. Edite o arquivo `css/shipmarine-style.css`
+1. Edite o arquivo `css/safeoffshore-style.css`
 2. As mudanças serão refletidas em todas as páginas `-v2.html`
 
 Para reverter para a versão original:
