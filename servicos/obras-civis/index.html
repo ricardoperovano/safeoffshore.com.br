@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obras Civis Subaquáticas - Safe Offshore</title>
+    <meta name="description" content="Serviços subaquáticos especializados para obras civis: inspeções, corte e solda submarina, batimetria, dragagem e sondagens.">
+    <link rel="icon" type="image/png" href="../../attachments/Logo/LOGO-01T-PNG.png">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/safeoffshore-style.css">
+</head>
+<body>
+    <!-- SVG Icons Sprite -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+        <symbol id="icon-anchor" viewBox="0 0 576 512"><path d="M352 176c0-26.5-21.5-48-48-48h-56v-64h56c8.8 0 16-7.2 16-16s-7.2-16-16-16h-56V16c0-8.8-7.2-16-16-16s-16 7.2-16 16v16h-56c-8.8 0-16 7.2-16 16s7.2 16 16 16h56v64h-56c-26.5 0-48 21.5-48 48v80h32v-80c0-8.8 7.2-16 16-16h128c8.8 0 16 7.2 16 16v80h32v-80zm128 256H96c-8.8 0-16 7.2-16 16s7.2 16 16 16h384c8.8 0 16-7.2 16-16s-7.2-16-16-16zM288 192c-53 0-96 43-96 96s43 96 96 96 96-43 96-96-43-96-96-96zm0 160c-35.3 0-64-28.7-64-64s28.7-64 64-64 64 28.7 64 64-28.7 64-64 64z"/></symbol>
+        <symbol id="icon-chevron-down" viewBox="0 0 448 512"><path d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></symbol>
+        <symbol id="icon-chevron-left" viewBox="0 0 320 512"><path d="M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z"/></symbol>
+        <symbol id="icon-chevron-right" viewBox="0 0 320 512"><path d="M285.476 272.971L91.132 467.314c-9.373 9.373-24.569 9.373-33.941 0l-22.667-22.667c-9.357-9.357-9.375-24.522-.04-33.901L188.505 256 34.484 101.255c-9.335-9.379-9.317-24.544.04-33.901l22.667-22.667c9.373-9.373 24.569-9.373 33.941 0L285.475 239.03c9.373 9.372 9.373 24.568.001 33.941z"/></symbol>
+        <symbol id="icon-chevron-up" viewBox="0 0 448 512"><path d="M240.971 130.524l194.343 194.343c9.373 9.373 9.373 24.569 0 33.941l-22.667 22.667c-9.357 9.357-24.522 9.375-33.901.04L224 227.495 69.255 381.516c-9.379 9.335-24.544 9.317-33.901-.04l-22.667-22.667c-9.373-9.373-9.373-24.569 0-33.941L207.03 130.525c9.372-9.373 24.568-9.373 33.941-.001z"/></symbol>
+        <symbol id="icon-times" viewBox="0 0 352 512"><path d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"/></symbol>
+        <symbol id="icon-hard-hat" viewBox="0 0 512 512"><path d="M480 288c0-80.25-49.28-148.92-119.19-177.62L320 192V80a16 16 0 0 0-16-16h-96a16 16 0 0 0-16 16v112l-40.81-81.62C81.28 139.08 32 207.75 32 288v32h448zm16 96H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h480c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16z"/></symbol>
+        <symbol id="icon-water" viewBox="0 0 576 512"><path d="M562.1 383.9c-21.5-2.4-42.1-10.5-57.9-22.9-14.1-11.1-34.2-11.3-48.2 0-37.9 30.4-107.2 30.4-145.7-1.5-13.5-11.2-33-9.1-46.7 1.8-38 30.1-106.9 30-145.2-1.7-13.5-11.2-33.3-8.9-47.1 2-15.5 12.2-36 20.1-57.7 22.4-7.9.8-13.6 7.8-13.6 15.7v32.2c0 9.1 7.6 16.8 16.7 16 28.8-2.5 56.1-11.4 79.4-25.9 56.5 34.6 137 34.1 192 0 56.5 34.6 137 34.1 192 0 23.3 14.2 50.9 23.3 79.1 25.8 9.1.8 16.7-6.9 16.7-16v-31.6c.1-8-5.7-15.4-13.8-16.3zm0-144c-21.5-2.4-42.1-10.5-57.9-22.9-14.1-11.1-34.2-11.3-48.2 0-37.9 30.4-107.2 30.4-145.7-1.5-13.5-11.2-33-9.1-46.7 1.8-38 30.1-106.9 30-145.2-1.7-13.5-11.2-33.3-8.9-47.1 2-15.5 12.2-36 20.1-57.7 22.4-7.9.8-13.6 7.8-13.6 15.7v32.2c0 9.1 7.6 16.8 16.7 16 28.8-2.5 56.1-11.4 79.4-25.9 56.5 34.6 137 34.1 192 0 56.5 34.6 137 34.1 192 0 23.3 14.2 50.9 23.3 79.1 25.8 9.1.8 16.7-6.9 16.7-16v-31.6c.1-8-5.7-15.4-13.8-16.3zm0-144C540.6 93.4 520 85.4 504.2 73 490.1 61.9 470 61.7 456 73c-37.9 30.4-107.2 30.4-145.7-1.5-13.5-11.2-33-9.1-46.7 1.8-38 30.1-106.9 30-145.2-1.7-13.5-11.2-33.3-8.9-47.1 2-15.5 12.2-36 20.1-57.7 22.4-7.9.8-13.6 7.8-13.6 15.7v32.2c0 9.1 7.6 16.8 16.7 16 28.8-2.5 56.1-11.4 79.4-25.9 56.5 34.6 137 34.1 192 0 56.5 34.6 137 34.1 192 0 23.3 14.2 50.9 23.3 79.1 25.8 9.1.8 16.7-6.9 16.7-16v-31.6c.1-8-5.7-15.4-13.8-16.3z"/></symbol>
+        <symbol id="icon-tools" viewBox="0 0 512 512"><path d="M501.1 395.7L384 278.6c-23.1-23.1-57.6-27.6-85.4-13.9L192 158.1V96L64 0 0 64l96 128h62.1l106.6 106.6c-13.6 27.8-9.2 62.3 13.9 85.4l117.1 117.1c14.6 14.6 38.2 14.6 52.7 0l52.7-52.7c14.5-14.6 14.5-38.2 0-52.7zM331.7 225c28.3 0 54.9 11 74.9 31l19.4 19.4c15.8-6.9 30.8-16.5 43.8-29.5 37.1-37.1 49.7-89.3 37.9-136.7-2.2-9-13.5-12.1-20.1-5.5l-74.4 74.4-67.9-11.3L334 98.9l74.4-74.4c6.6-6.6 3.4-17.9-5.7-20.2-47.4-11.7-99.6.9-136.6 37.9-28.5 28.5-41.9 66.1-41.2 103.6l82.1 82.1c8.1-1.9 16.5-2.9 24.7-2.9zm-103.9 82l-56.7-56.7L18.7 402.8c-25 25-25 65.5 0 90.5s65.5 25 90.5 0l123.6-123.6c-7.6-19.9-9.9-41.6-5-62.7zM64 472c-13.2 0-24-10.8-24-24 0-13.3 10.7-24 24-24s24 10.7 24 24c0 13.2-10.7 24-24 24z"/></symbol>
+        <symbol id="icon-check-circle" viewBox="0 0 512 512"><path d="M504 256c0 136.967-111.033 248-248 248S8 392.967 8 256 119.033 8 256 8s248 111.033 248 248zM227.314 387.314l184-184c6.248-6.248 6.248-16.379 0-22.627l-22.627-22.627c-6.248-6.249-16.379-6.249-22.628 0L216 308.118l-70.059-70.059c-6.248-6.248-16.379-6.248-22.628 0l-22.627 22.627c-6.248 6.248-6.248 16.379 0 22.627l104 104c6.249 6.249 16.379 6.249 22.628.001z"/></symbol>
+    </svg>
+
+
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="../../index.html" class="logo">
+                        <picture>
+                    <source srcset="../../attachments/Logo/LOGO-01T-PNG.webp" type="image/webp">
+                    <img src="../../attachments/Logo/LOGO-01T-PNG.png" alt="Safe Offshore Logo" >
+                </picture>
+                    </a>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle"><span></span><span></span><span></span></button>
+                    <ul class="nav-menu" id="navMenu">
+                        <li><a href="../../index.html">Página Inicial</a></li>
+                        <li><a href="../../about-us/">Quem Somos</a></li>
+                        <li class="dropdown">
+                            <a href="../../servicos/" class="dropdown-toggle active">Serviços <svg class="icon"><use href="#icon-chevron-down"/></svg></a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-all-link"><a href="../">📋 Ver Todos os Serviços</a></li>
+                                <li><a href="../../servicos/sinalizacao-nautica/">Sinalização Náutica</a></li>
+                                <li><a href="../../servicos/comercio-de-equipamentos-de-sinalizacao-nautica/">Comércio de Equipamentos</a></li>
+                                <li><a href="../../servicos/documentacao-marinha/">Documentação Marinha</a></li>
+                                <li><a href="../../servicos/defensas-portos/">Defensas de Portos</a></li>
+                                <li><a href="../../servicos/apoio-subaquatico/">Apoio Subaquático</a></li>
+                                <li><a href="../../servicos/obras-civis/">Obras Civis</a></li>
+                                <li><a href="../../servicos/reparo-naval/">Reparo Naval</a></li>
+                                <li><a href="../../servicos/hidreletricas/">Hidrelétricas</a></li>
+                                <li><a href="../../servicos/agulha-magnetica-e-barometro-aneroide/">Agulha Magnética</a></li>
+                                <li><a href="../../servicos/alpinismo-industrial/">Alpinismo Industrial</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="../../principais-clientes-1/">Clientes</a></li>
+                        <li><a href="../../contato/">Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <h1 class="page-title">Obras Civis Subaquáticas</h1>
+            <nav class="breadcrumb">
+                <a href="../../index.html">Home</a>
+                <span class="separator">/</span>
+                <a href="../../servicos/">Serviços</a>
+                <span class="separator">/</span>
+                <span class="current">Obras Civis</span>
+            </nav>
+        </div>
+    </section>
+
+    <section class="service-page-section">
+        <div class="container">
+            <div class="service-content">
+                <div class="service-description">
+                    <h3>Apoio Subaquático em Obras Civis</h3>
+                    <p>A Safe Offshore dispõe de equipe altamente qualificada e equipamentos especializados para execução de serviços subaquáticos em obras civis, oferecendo soluções completas para portos, pontes, barragens e estruturas marítimas.</p>
+
+                    <h3>Nossos Serviços</h3>
+                    <ul>
+                        <li>Corte e solda submarina</li>
+                        <li>Inspeções em geral, com ou sem filmagens e fotografias</li>
+                        <li>Mergulho em interior de estacas</li>
+                        <li>Dragagem com Air Lift e maraca</li>
+                        <li>Inspeções em enrocamentos</li>
+                        <li>Fotografias e filmagens submarinas de alta definição</li>
+                        <li>Medição de seimplex</li>
+                        <li>Instalação e manutenção de proteção catódica</li>
+                        <li>Aplicação de massa epóxi</li>
+                        <li>Sondagens com Jet Probe</li>
+                        <li>Batimetria</li>
+                    </ul>
+
+                    <h3>Inspeções Técnicas</h3>
+                    <p>Realizamos inspeções subaquáticas completas e documentadas, utilizando equipamentos de filmagem e fotografia de última geração, fornecendo relatórios técnicos detalhados para:</p>
+                    <ul>
+                        <li>Pontes e viadutos</li>
+                        <li>Píeres e cais</li>
+                        <li>Barragens e vertedouros</li>
+                        <li>Tomadas d'água</li>
+                        <li>Estruturas de fundação</li>
+                    </ul>
+
+                    <h3>Tecnologia e Segurança</h3>
+                    <p>Utilizamos tecnologia de ponta para garantir a qualidade e segurança de nossos serviços, incluindo sistemas de mergulho profundo, ROVs (Remotely Operated Vehicles) quando necessário, e equipamentos de solda subaquática certificados.</p>
+
+                    <div class="service-highlights">
+                        <div class="highlight-item">
+                            <svg class="icon"><use href="#icon-hard-hat"/></svg>
+                            <div>
+                                <h4>Segurança Certificada</h4>
+                                <p>Equipe treinada e certificada</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <svg class="icon"><use href="#icon-tools"/></svg>
+                            <div>
+                                <h4>Equipamentos Modernos</h4>
+                                <p>Tecnologia de ponta em mergulho</p>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <svg class="icon"><use href="#icon-check-circle"/></svg>
+                            <div>
+                                <h4>Relatórios Completos</h4>
+                                <p>Documentação técnica detalhada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>Precisa de Serviços Subaquáticos?</h2>
+                <p>Entre em contato e solicite um orçamento para seu projeto de obra civil subaquática.</p>
+                <div class="cta-buttons">
+                    <a href="../../contato/" class="btn btn-primary">Fale Conosco</a>
+                    <a href="../../servicos/" class="btn btn-secondary">Ver Todos os Serviços</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Safe Offshore</h3>
+                    <p>Serviços Marítimos Especializados</p>
+                </div>
+                <div class="footer-col">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="../../index.html">Página Inicial</a></li>
+                        <li><a href="../../about-us/">Quem Somos</a></li>
+                        <li><a href="../../servicos/">Serviços</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2015-2024 SAFE OFFSHORE Serviços Marítimos Ltda. Todos os Direitos Reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop"><svg class="icon"><use href="#icon-chevron-up"/></svg></button>
+    <script src="../../js/modern-script.js"></script>
+    <!-- SVG Icons Loaded -->
+    <script>
+        document.documentElement.classList.add('svg-loaded');
+    </script>
+
+</body>
+</html>
