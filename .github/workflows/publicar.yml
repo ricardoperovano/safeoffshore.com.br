@@ -64,3 +64,5 @@ jobs:
             scripts/**
             **/*.md
             CNAME
+            # enviado à mão até o redirecionamento de HTTPS ser testado no servidor
+            web.config
