@@ -461,77 +461,68 @@ window.addEventListener('resize', debounce(function() {
     }
 }, 250));
 
-/* ========== Form Validation (if needed for contact forms) ========== */
-function initFormValidation() {
-    const forms = document.querySelectorAll('form');
+/* ========== Contact Form (orçamento via WhatsApp ou e-mail) ========== */
+const CONTACT_WHATSAPP = '5527996207455';
+const CONTACT_EMAIL = 'contato@safeoffshore.com.br';
 
-    forms.forEach(form => {
-        form.addEventListener('submit', function(e) {
-            const inputs = form.querySelectorAll('input[required], textarea[required]');
-            let isValid = true;
-
-            inputs.forEach(input => {
-                if (!input.value.trim()) {
-                    isValid = false;
-                    input.classList.add('error');
-                } else {
-                    input.classList.remove('error');
-                }
-            });
-
-            if (!isValid) {
-                e.preventDefault();
-                alert('Por favor, preencha todos os campos obrigatórios.');
-            }
-        });
-    });
-}
-
-// Initialize form validation if forms exist
-if (document.querySelector('form')) {
-    initFormValidation();
-}
-
-/* ========== Contact Form Handler ========== */
 function initContactForm() {
     const contactForm = document.getElementById('contactForm');
+    if (!contactForm) return;
 
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Get form data
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                phone: document.getElementById('phone').value,
-                subject: document.getElementById('subject').value,
-                message: document.getElementById('message').value
-            };
-
-            // Create mailto link
-            const mailtoLink = `mailto:contato@safeoffshore.com.br?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(
-                `Nome: ${formData.name}\n` +
-                `E-mail: ${formData.email}\n` +
-                `Telefone: ${formData.phone}\n\n` +
-                `Mensagem:\n${formData.message}`
-            )}`;
-
-            // Open email client
-            window.location.href = mailtoLink;
-
-            // Show success message
-            alert('Seu cliente de e-mail será aberto para enviar a mensagem.');
-
-            // Reset form
-            contactForm.reset();
+    let channel = 'whatsapp';
+    contactForm.querySelectorAll('button[data-channel]').forEach(button => {
+        button.addEventListener('click', function() {
+            channel = this.dataset.channel;
         });
-    }
+    });
+
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        let firstInvalid = null;
+        contactForm.querySelectorAll('[required]').forEach(input => {
+            const invalid = !input.value.trim();
+            input.classList.toggle('error', invalid);
+            input.setAttribute('aria-invalid', invalid);
+            if (invalid && !firstInvalid) firstInvalid = input;
+        });
+        if (firstInvalid) {
+            firstInvalid.focus();
+            return;
+        }
+
+        const field = id => document.getElementById(id).value.trim();
+        const lines = [
+            'Olá! Gostaria de solicitar um orçamento.',
+            '',
+            `Nome: ${field('name')}`,
+            field('company') ? `Empresa: ${field('company')}` : null,
+            `Telefone: ${field('phone')}`,
+            field('service') ? `Serviço: ${field('service')}` : null,
+            '',
+            field('message')
+        ];
+        const text = lines.filter(line => line !== null).join('\n');
+
+        if (channel === 'email') {
+            const subject = `Orçamento${field('service') ? ' - ' + field('service') : ''} (site)`;
+            window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
+        } else {
+            window.open(`https://wa.me/${CONTACT_WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');
+        }
+    });
+
+    contactForm.addEventListener('input', function(e) {
+        if (e.target.value.trim()) {
+            e.target.classList.remove('error');
+            e.target.removeAttribute('aria-invalid');
+        }
+    });
 }
 
 // Initialize contact form
 initContactForm();
 
 /* ========== Console Message ========== */
-console.log('%c🌊 Safe Offshore - Serviços Marítimos', 'color: #0066cc; font-size: 20px; font-weight: bold;');
-console.log('%cSite desenvolvido com tecnologias modernas para melhor experiência do usuário.', 'color: #00a8e8; font-size: 12px;');
+console.log('%c🌊 Safe Offshore - Serviços Marítimos', 'color: #1a3657; font-size: 20px; font-weight: bold;');
+console.log('%cSite desenvolvido com tecnologias modernas para melhor experiência do usuário.', 'color: #cf651f; font-size: 12px;');

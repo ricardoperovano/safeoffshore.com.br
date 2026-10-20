@@ -5,6 +5,37 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
 e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [2.1.0] - Outubro 2026
+
+### 🎨 Identidade visual azul + laranja (pedido do cliente)
+
+#### ✨ Adicionado
+- Paleta oficial extraída do logo: azul-marinho `#1A3657` e laranja cobre `#CF651F`, com variantes de contraste AA (`--accent-dark`, `--accent-light`)
+- Botão flutuante de WhatsApp em todas as páginas, (27) 99620-7455
+- Formulário "Solicite um orçamento" em Contato, que envia a mensagem preenchida pelo WhatsApp ou por e-mail
+- Rodapé completo e igual nas 16 páginas, com endereço, telefone, WhatsApp e e-mail
+- Favicon com o escudo do logo (`favicon.ico`, `icon-192.png`, `apple-touch-icon.png`)
+- `sitemap.xml` e `robots.txt`
+- Meta description nas 6 páginas que não tinham
+- Dados estruturados LocalBusiness com endereço e telefones na home
+
+#### 🔧 Alterado
+- Botões, menu ativo, sublinhados, ícones, checks e títulos do rodapé passam a usar o laranja da marca
+- Imagens das páginas de serviço servidas em WebP com width/height e lazy loading (`odizio_boia_articulada`: de 1,6 MB para 85 KB)
+- Fotos de hidrelétricas renomeadas (`hidreletricas-1..5.jpeg`)
+- Copyright atualizado para 2015-2026
+
+#### 🐛 Corrigido
+- Ícones vazios em "100+ Clientes" e "10+ Anos" na home (símbolos ausentes no sprite)
+- Ícones SVG pretos nas páginas internas (faltava `.icon { fill: currentColor }`)
+- Logos de clientes quase invisíveis (filtro grayscale + opacidade 70%)
+- Menu da página da boia AMRSO-3000 listava só 4 dos 10 serviços
+- Flash de azul `#0066cc` e de botão branco na home antes do CSS principal carregar
+
+#### 🗑️ Removido
+- 110 arquivos do site antigo sem uso: CSS e JS legados, `modules/`, `components/`, `fonts/`, bordas e separadores, `escolher-versao.html` e `.tmp`
+- Fotos, logos, PDF de apresentação e áudios sem uso foram movidos para `_material-cliente/`, bloqueado no `robots.txt` (não publicar)
+
 ---
 
 ## [1.0.0] - Outubro 2024

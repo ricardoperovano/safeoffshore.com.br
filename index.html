@@ -26,7 +26,9 @@
     <meta property="twitter:description" content="Empresa especializada em sinalização náutica, balizamento e apoio subaquático.">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="attachments/Logo/LOGO-01T-PNG.png">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="icon-192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
     <!-- Preload LCP Image (Hero First Slide) -->
     <link rel="preload" as="image" href="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.webp" type="image/webp">
@@ -139,15 +141,28 @@
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "LocalBusiness",
         "name": "Safe Offshore Serviços Marítimos",
         "url": "https://www.safeoffshore.com.br",
         "logo": "https://www.safeoffshore.com.br/attachments/Logo/LOGO-01T-PNG.png",
         "description": "Empresa especializada em sinalização náutica, balizamento, apoio subaquático e serviços marítimos",
+        "image": "https://www.safeoffshore.com.br/attachments/Logo/LOGO-01T-PNG.png",
+        "telephone": "+55-27-3376-4732",
+        "email": "contato@safeoffshore.com.br",
+        "foundingDate": "2015",
         "address": {
             "@type": "PostalAddress",
+            "streetAddress": "Rua Fortunato Abreu Gágno, 728, Sala 1",
+            "addressLocality": "Vitória",
             "addressRegion": "ES",
+            "postalCode": "29090-200",
             "addressCountry": "BR"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+55-27-99620-7455",
+            "contactType": "customer service",
+            "availableLanguage": "Portuguese"
         },
         "sameAs": []
     }
@@ -177,6 +192,8 @@
         <symbol id="icon-toolbox" viewBox="0 0 512 512"><path d="M502.63 214.63l-45.25-45.25c-6-6-14.14-9.37-22.63-9.37H384V80c0-26.51-21.49-48-48-48H176c-26.51 0-48 21.49-48 48v80H77.25c-8.49 0-16.62 3.37-22.63 9.37l-45.25 45.25c-6 6-9.37 14.14-9.37 22.63V448c0 17.67 14.33 32 32 32h448c17.67 0 32-14.33 32-32V237.25c0-8.48-3.37-16.62-9.37-22.62zM320 240h-32v-48c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v48h-32v-48c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v48H96v-80h320v80h-96v-48c0-8.84-7.16-16-16-16h-32c-8.84 0-16 7.16-16 16v48zm16-160H176V64h160v16z"/></symbol>
         <symbol id="icon-envelope" viewBox="0 0 512 512"><path d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"/></symbol>
         <symbol id="icon-map-marker-alt" viewBox="0 0 384 512"><path d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"/></symbol>
+        <symbol id="icon-phone" viewBox="0 0 512 512"><path d="M493.4 24.6l-104-24c-11.3-2.6-22.9 3.3-27.5 13.9l-48 112c-4.2 9.8-1.4 21.3 6.9 28l60.6 49.6c-36 76.7-98.9 140.5-177.2 177.2l-49.6-60.6c-6.8-8.3-18.2-11.1-28-6.9l-112 48C3.9 366.5-2 378.1.6 389.4l24 104C27.1 504.2 36.7 512 48 512c256.1 0 464-207.5 464-464 0-11.2-7.7-20.9-18.6-23.4z"/></symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24"><path d="M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.88,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.18 11.2,12.87C12.11,13.75 12.91,14.04 13.15,14.17C13.39,14.31 13.54,14.29 13.69,14.13L14.5,13.19C14.69,12.94 14.85,13 15.08,13.08L16.75,13.96M12,2C17.52,2 22,6.48 22,12C22,17.52 17.52,22 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12C2,6.48 6.48,2 12,2M12,4C7.58,4 4,7.58 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20C16.42,20 20,16.42 20,12C20,7.58 16.42,4 12,4Z"/></symbol>
     </svg>
 
     <!-- Header -->
@@ -258,7 +275,7 @@
         <div class="hero-v3-image">
             <picture>
                 <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.webp" type="image/webp">
-                <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.jpg" alt="Serviços Marítimos Safe Offshore" fetchpriority="high">
+                <img width="1280" height="721" src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.jpg" alt="Serviços Marítimos Safe Offshore" fetchpriority="high">
             </picture>
         </div>
     </section>
@@ -278,7 +295,7 @@
                     <div class="service-card-v3-image">
                         <picture>
                             <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.webp" type="image/webp">
-                            <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.jpg" alt="Sinalização Náutica">
+                            <img loading="lazy" decoding="async" width="640" height="480" src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.jpg" alt="Sinalização Náutica">
                         </picture>
                     </div>
                     <div class="service-card-v3-content">
@@ -295,7 +312,7 @@
                     <div class="service-card-v3-image">
                         <picture>
                             <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.webp" type="image/webp">
-                            <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.jpg" alt="Apoio Subaquático">
+                            <img loading="lazy" decoding="async" width="1920" height="1080" src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.jpg" alt="Apoio Subaquático">
                         </picture>
                     </div>
                     <div class="service-card-v3-content">
@@ -312,7 +329,7 @@
                     <div class="service-card-v3-image">
                         <picture>
                             <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170718_084453843.webp" type="image/webp">
-                            <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170718_084453843.jpg" alt="Agulha Magnética">
+                            <img loading="lazy" decoding="async" width="1920" height="1080" src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170718_084453843.jpg" alt="Agulha Magnética">
                         </picture>
                     </div>
                     <div class="service-card-v3-content">
@@ -374,7 +391,7 @@
                 <div class="about-image-v3">
                     <picture>
                         <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.webp" type="image/webp">
-                        <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.jpg" alt="Safe Offshore">
+                        <img loading="lazy" decoding="async" width="1920" height="1080" src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.jpg" alt="Safe Offshore">
                     </picture>
                 </div>
 
@@ -519,7 +536,7 @@
                 <div class="portfolio-item">
                     <picture>
                         <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.webp" type="image/webp">
-                        <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.jpg" alt="Projeto">
+                        <img loading="lazy" decoding="async" width="1280" height="721" src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/55b14eb5-ef38-1072-b53b-1d5166b49d96.jpg" alt="Projeto">
                     </picture>
                     <div class="portfolio-overlay">
                         <div>
@@ -532,7 +549,7 @@
                 <div class="portfolio-item">
                     <picture>
                         <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.webp" type="image/webp">
-                        <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.jpg" alt="Projeto">
+                        <img loading="lazy" decoding="async" width="640" height="480" src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/b132f483-2500-a6d8-edc7-79d446bfcdd4.jpg" alt="Projeto">
                     </picture>
                     <div class="portfolio-overlay">
                         <div>
@@ -545,7 +562,7 @@
                 <div class="portfolio-item">
                     <picture>
                         <source srcset="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.webp" type="image/webp">
-                        <img src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.jpg" alt="Projeto">
+                        <img loading="lazy" decoding="async" width="1920" height="1080" src="attachments/Slider/31cb66d3-0acb-0ce2-9dcb-60849b9c4a7c/IMG_20170722_062927842.jpg" alt="Projeto">
                     </picture>
                     <div class="portfolio-overlay">
                         <div>
@@ -571,37 +588,37 @@
                 <div class="client-logo-box">
                     <picture>
                         <source srcset="attachments/Image/technip82b7.webp" type="image/webp">
-                        <img src="attachments/Image/technip82b7.jpg" alt="Technip" loading="lazy">
+                        <img width="200" height="100" src="attachments/Image/technip82b7.jpg" alt="Technip" loading="lazy">
                     </picture>
                 </div>
                 <div class="client-logo-box">
                     <picture>
                         <source srcset="attachments/Image/LOGO-JURONG82b7.webp" type="image/webp">
-                        <img src="attachments/Image/LOGO-JURONG82b7.jpg" alt="Jurong Shipyard" loading="lazy">
+                        <img width="160" height="160" src="attachments/Image/LOGO-JURONG82b7.jpg" alt="Jurong Shipyard" loading="lazy">
                     </picture>
                 </div>
                 <div class="client-logo-box">
                     <picture>
                         <source srcset="attachments/Image/camorim82b7.webp" type="image/webp">
-                        <img src="attachments/Image/camorim82b7.jpg" alt="Camorim" loading="lazy">
+                        <img width="134" height="50" src="attachments/Image/camorim82b7.jpg" alt="Camorim" loading="lazy">
                     </picture>
                 </div>
                 <div class="client-logo-box">
                     <picture>
                         <source srcset="attachments/Image/Dratec82b7.webp" type="image/webp">
-                        <img src="attachments/Image/Dratec82b7.jpg" alt="Dratec" loading="lazy">
+                        <img width="110" height="43" src="attachments/Image/Dratec82b7.jpg" alt="Dratec" loading="lazy">
                     </picture>
                 </div>
                 <div class="client-logo-box">
                     <picture>
                         <source srcset="attachments/Image/jandenul82b7.webp" type="image/webp">
-                        <img src="attachments/Image/jandenul82b7.jpg" alt="Jan De Nul" loading="lazy">
+                        <img width="80" height="99" src="attachments/Image/jandenul82b7.jpg" alt="Jan De Nul" loading="lazy">
                     </picture>
                 </div>
                 <div class="client-logo-box">
                     <picture>
                         <source srcset="attachments/Image/astromaritima82b7.webp" type="image/webp">
-                        <img src="attachments/Image/astromaritima82b7.jpg" alt="Astro Marítima" loading="lazy">
+                        <img width="200" height="100" src="attachments/Image/astromaritima82b7.jpg" alt="Astro Marítima" loading="lazy">
                     </picture>
                 </div>
             </div>
@@ -632,51 +649,48 @@
                 <div class="footer-col">
                     <h3>Safe Offshore</h3>
                     <p>Serviços Marítimos Especializados</p>
-                    <p>Excelência em sinalização náutica, balizamento e apoio subaquático desde 2015.</p>
+                    <p>Sinalização náutica, balizamento e apoio subaquático desde 2015.</p>
                 </div>
-
                 <div class="footer-col">
                     <h3>Links Rápidos</h3>
                     <ul>
-                        <li><a href="/">Página Inicial</a></li>
+                        <li><a href="index.html">Página Inicial</a></li>
                         <li><a href="about-us/index.html">Quem Somos</a></li>
                         <li><a href="servicos/index.html">Serviços</a></li>
                         <li><a href="principais-clientes-1/index.html">Clientes</a></li>
                         <li><a href="contato/index.html">Contato</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h3>Serviços</h3>
                     <ul>
                         <li><a href="servicos/sinalizacao-nautica/index.html">Sinalização Náutica</a></li>
+                        <li><a href="servicos/comercio-de-equipamentos-de-sinalizacao-nautica/index.html">Comércio de Equipamentos</a></li>
                         <li><a href="servicos/apoio-subaquatico/index.html">Apoio Subaquático</a></li>
+                        <li><a href="servicos/reparo-naval/index.html">Reparo Naval</a></li>
                         <li><a href="servicos/agulha-magnetica-e-barometro-aneroide/index.html">Agulha Magnética</a></li>
-                        <li><a href="servicos/hidreletricas/index.html">Hidrelétricas</a></li>
-                        <li><a href="servicos/alpinismo-industrial/index.html">Alpinismo Industrial</a></li>
+                        <li><a href="servicos/index.html">Ver todos os serviços</a></li>
                     </ul>
                 </div>
-
                 <div class="footer-col">
                     <h3>Contato</h3>
                     <ul class="footer-contact">
-                        <li>
-                            <svg class="icon"><use href="#icon-map-marker-alt"/></svg>
-                            <span>Espírito Santo, Brasil</span>
-                        </li>
-                        <li>
-                            <svg class="icon"><use href="#icon-envelope"/></svg>
-                            <a href="contato/index.html">Entre em Contato</a>
-                        </li>
+                        <li><svg class="icon"><use href="#icon-map-marker-alt"/></svg><span>Jardim Camburi, Vitória - ES</span></li>
+                        <li><svg class="icon"><use href="#icon-phone"/></svg><a href="tel:+552733764732">(27) 3376-4732</a></li>
+                        <li><svg class="icon"><use href="#icon-whatsapp"/></svg><a href="https://wa.me/5527996207455?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Safe%20Offshore%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener">(27) 99620-7455</a></li>
+                        <li><svg class="icon"><use href="#icon-envelope"/></svg><a href="mailto:contato@safeoffshore.com.br">contato@safeoffshore.com.br</a></li>
                     </ul>
                 </div>
             </div>
-
             <div class="footer-bottom">
                 <p>&copy; 2015-2026 SAFE OFFSHORE Serviços Marítimos Ltda. Todos os Direitos Reservados.</p>
             </div>
         </div>
     </footer>
+
+    <a class="whatsapp-float" href="https://wa.me/5527996207455?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Safe%20Offshore%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es." target="_blank" rel="noopener" aria-label="Fale conosco pelo WhatsApp">
+        <svg class="icon"><use href="#icon-whatsapp"/></svg>
+    </a>
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="backToTop" aria-label="Voltar ao topo">
