@@ -45,7 +45,61 @@ document.addEventListener('DOMContentLoaded', function() {
     initSmoothScroll();
     initHeaderScroll();
     initDropdownMobile();
+    initCookieConsent();
 });
+
+/* ========== Aviso de cookies (LGPD) ========== */
+// O Analytics só é carregado depois do "Aceitar" (ver carregarAnalytics() no <head>).
+const CONSENT_KEY = 'cookies-consentimento';
+
+function getConsent() {
+    try { return localStorage.getItem(CONSENT_KEY); } catch (e) { return null; }
+}
+
+function setConsent(value) {
+    try { localStorage.setItem(CONSENT_KEY, value); } catch (e) {}
+}
+
+function initCookieConsent() {
+    const footerBottom = document.querySelector('.footer-bottom');
+    if (footerBottom) {
+        const prefs = document.createElement('button');
+        prefs.type = 'button';
+        prefs.className = 'cookie-prefs-link';
+        prefs.textContent = 'Preferências de cookies';
+        prefs.addEventListener('click', showCookieBanner);
+        footerBottom.appendChild(prefs);
+    }
+    if (!getConsent()) showCookieBanner();
+}
+
+function showCookieBanner() {
+    if (document.getElementById('cookieBanner')) return;
+    const banner = document.createElement('div');
+    banner.id = 'cookieBanner';
+    banner.className = 'cookie-banner';
+    banner.setAttribute('role', 'region');
+    banner.setAttribute('aria-label', 'Aviso de cookies');
+    banner.innerHTML = `
+        <p>Usamos cookies do Google Analytics para entender como o site é usado e melhorá-lo. Eles só são ativados se você aceitar.</p>
+        <div class="cookie-banner-actions">
+            <button type="button" class="btn btn-primary" data-consent="aceito">Aceitar</button>
+            <button type="button" class="btn btn-outline-light" data-consent="recusado">Recusar</button>
+        </div>`;
+    banner.addEventListener('click', function(e) {
+        const choice = e.target.closest('[data-consent]');
+        if (!choice) return;
+        const previous = getConsent();
+        setConsent(choice.dataset.consent);
+        banner.remove();
+        if (choice.dataset.consent === 'aceito' && previous !== 'aceito' && typeof carregarAnalytics === 'function') {
+            carregarAnalytics();
+        } else if (choice.dataset.consent === 'recusado' && previous === 'aceito') {
+            window.location.reload(); // descarrega o Analytics que já estava ativo
+        }
+    });
+    document.body.appendChild(banner);
+}
 
 /* ========== Mobile Menu ========== */
 function initMobileMenu() {

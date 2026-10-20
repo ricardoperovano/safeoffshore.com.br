@@ -17,6 +17,9 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 - Galeria "Nossos Trabalhos" na página de Defensas, que aparece quando houver fotos
 - `web.config` para a Locaweb (IIS): tipo MIME do `.webp` e redirecionamento de http/www para `https://safeoffshore.com.br`
 - Fallback no JS: se o servidor não entregar o `.webp`, o navegador usa o `.jpg`/`.png`
+- Google Analytics 4 (`G-MGSWB93D6H`) com evento `contato` (WhatsApp, telefone, e-mail e formulário de orçamento)
+- Aviso de cookies (LGPD): o Analytics só carrega depois do "Aceitar" (Consent Mode v2, tudo negado por padrão); link "Preferências de cookies" no rodapé para mudar a escolha
+- Publicação por `lftp` com FTPS, enviando só os arquivos alterados
 
 ---
 

@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MGSWB93D6H"></script>
+    <!-- Google tag (gtag.js): só carrega depois do "Aceitar" no aviso de cookies (LGPD) -->
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'});
       gtag('js', new Date());
-
       gtag('config', 'G-MGSWB93D6H');
+      function carregarAnalytics() {
+        gtag('consent', 'update', {analytics_storage: 'granted'});
+        var s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-MGSWB93D6H';
+        document.head.appendChild(s);
+      }
+      try { if (localStorage.getItem('cookies-consentimento') === 'aceito') carregarAnalytics(); } catch (e) {}
     </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
