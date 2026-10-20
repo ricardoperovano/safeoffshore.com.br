@@ -52,6 +52,9 @@ jobs:
           server: ${{ env.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
+          # a Locaweb derruba a conexão de dados em FTP sem criptografia
+          protocol: ftps
+          security: loose
           server-dir: /web/
           exclude: |
             **/.git*
