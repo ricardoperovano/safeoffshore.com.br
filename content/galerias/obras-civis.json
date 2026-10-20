@@ -1,0 +1,13 @@
+{
+  "titulo": "Nossos Trabalhos",
+  "fotos": [
+    {
+      "imagem": "/uploads/obras-civis-limeza_cais.jpeg",
+      "descricao": "Inspeção subaquática de pilares de cais - Obras Civis Safe Offshore"
+    },
+    {
+      "imagem": "/uploads/obras-civis-limpeza_cais_2.jpeg",
+      "descricao": "Inspeção de estruturas submersas - Obras Civis Safe Offshore"
+    }
+  ]
+}

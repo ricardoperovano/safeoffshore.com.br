@@ -1,0 +1,40 @@
+{
+  "fotos": [
+    {
+      "imagem": "/uploads/clientes-technip82b7.jpg",
+      "nome": "Technip"
+    },
+    {
+      "imagem": "/uploads/clientes-LOGO-JURONG82b7.jpg",
+      "nome": "Seatrium (antigo Estaleiro Jurong Aracruz)"
+    },
+    {
+      "imagem": "/uploads/clientes-camorim82b7.jpg",
+      "nome": "Camorim"
+    },
+    {
+      "imagem": "/uploads/clientes-Dratec82b7.jpg",
+      "nome": "Dratec"
+    },
+    {
+      "imagem": "/uploads/clientes-jandenul82b7.jpg",
+      "nome": "Jan De Nul"
+    },
+    {
+      "imagem": "/uploads/clientes-astromaritima82b7.jpg",
+      "nome": "Astro Marítima"
+    },
+    {
+      "imagem": "/uploads/clientes-OAS82b7.jpg",
+      "nome": "OAS"
+    },
+    {
+      "imagem": "/uploads/clientes-andrade-gutierrez82b7.png",
+      "nome": "Andrade Gutierrez"
+    },
+    {
+      "imagem": "/uploads/clientes-estacon82b7.jpg",
+      "nome": "Estacon"
+    }
+  ]
+}

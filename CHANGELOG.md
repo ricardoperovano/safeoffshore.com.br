@@ -5,6 +5,21 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
 e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [2.2.0] - Outubro 2026
+
+### 📸 Painel de fotos gerenciado pelo cliente
+
+#### ✨ Adicionado
+- Painel de fotos (Pages CMS, `.pages.yml`): o cliente inclui, ordena e remove fotos de 10 galerias sem mexer em código. Guia de uso em `GUIA-FOTOS.md`
+- `content/galerias/*.json`: dados das galerias (projetos da home, logos de clientes, sinalização, hidrelétricas, apoio subaquático, reparo naval, obras civis, documentação, defensas e agulha magnética)
+- `scripts/galerias.py`: otimiza as fotos (até 1600px, JPG/PNG + WebP) em `images/galerias/` e reescreve o HTML entre os marcadores `<!-- galeria:nome -->`
+- GitHub Action `Publicar site`: gera as galerias a cada push na `main` e envia para a Locaweb por FTP (segredos `FTP_SERVER`, `FTP_USERNAME` e `FTP_PASSWORD`)
+- Galeria "Nossos Trabalhos" na página de Defensas, que aparece quando houver fotos
+- `web.config` para a Locaweb (IIS): tipo MIME do `.webp` e redirecionamento de http/www para `https://safeoffshore.com.br`
+- Fallback no JS: se o servidor não entregar o `.webp`, o navegador usa o `.jpg`/`.png`
+
+---
+
 ## [2.1.0] - Outubro 2026
 
 ### 🎨 Identidade visual azul + laranja (pedido do cliente)

@@ -1,0 +1,21 @@
+{
+  "titulo": "Nossos Trabalhos",
+  "fotos": [
+    {
+      "imagem": "/uploads/apoio-subaquatico-merg282b7.png",
+      "descricao": "Mergulho Profissional - Safe Offshore"
+    },
+    {
+      "imagem": "/uploads/apoio-subaquatico-merg382b7.png",
+      "descricao": "Apoio Subaquático"
+    },
+    {
+      "imagem": "/uploads/apoio-subaquatico-Imagem182b7.jpg",
+      "descricao": "Serviços de Mergulho"
+    },
+    {
+      "imagem": "/uploads/apoio-subaquatico-Imagem382b7.jpg",
+      "descricao": "Inspeção Subaquática"
+    }
+  ]
+}

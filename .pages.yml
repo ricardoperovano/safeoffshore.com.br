@@ -1,0 +1,180 @@
+# Painel de fotos do site (Pages CMS: https://app.pagescms.org)
+# Cada item abaixo edita um arquivo em content/galerias/. Ao salvar, o GitHub Action
+# "Publicar site" otimiza as fotos, atualiza as páginas e envia para a Locaweb.
+
+media:
+  input: uploads
+  output: /uploads
+  rename: safe
+  extensions: [jpg, jpeg, png, webp]
+
+content:
+  - name: projetos
+    label: "Página inicial — Projetos realizados"
+    type: file
+    path: content/galerias/projetos.json
+    fields:
+      - name: fotos
+        label: Projetos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.titulo} — {fields.local}"
+        fields:
+          - { name: imagem, label: Foto, type: image, required: true }
+          - { name: titulo, label: "Serviço (ex.: Sinalização Náutica)", type: string, required: true }
+          - { name: local, label: "Local (ex.: Porto de Vitória - ES)", type: string }
+
+  - name: clientes
+    label: "Clientes — logos"
+    type: file
+    path: content/galerias/clientes.json
+    fields:
+      - name: fotos
+        label: "Logos (os 6 primeiros também aparecem na página inicial)"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.nome}"
+        fields:
+          - { name: imagem, label: Logo, type: image, required: true }
+          - { name: nome, label: Nome do cliente, type: string, required: true }
+
+  - name: sinalizacao-nautica
+    label: "Sinalização Náutica — Operações de manutenção"
+    type: file
+    path: content/galerias/sinalizacao-nautica.json
+    fields:
+      - { name: titulo, label: Título da seção, type: string }
+      - name: fotos
+        label: Fotos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.legenda}"
+        fields:
+          - { name: imagem, label: Foto, type: image, required: true }
+          - { name: legenda, label: "Legenda (aparece embaixo da foto)", type: string, required: true }
+
+  - name: hidreletricas
+    label: "Hidrelétricas — Nossos trabalhos"
+    type: file
+    path: content/galerias/hidreletricas.json
+    fields:
+      - { name: titulo, label: "Título da seção", type: string }
+      - name: fotos
+        label: Fotos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.descricao}"
+        fields:
+          - { name: imagem, label: Foto, type: image, required: true }
+          - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+
+  - name: apoio-subaquatico
+    label: "Apoio Subaquático — Nossos trabalhos"
+    type: file
+    path: content/galerias/apoio-subaquatico.json
+    fields:
+      - { name: titulo, label: "Título da seção", type: string }
+      - name: fotos
+        label: Fotos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.descricao}"
+        fields:
+          - { name: imagem, label: Foto, type: image, required: true }
+          - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+
+  - name: reparo-naval
+    label: "Reparo Naval — Nossos trabalhos"
+    type: file
+    path: content/galerias/reparo-naval.json
+    fields:
+      - { name: titulo, label: "Título da seção", type: string }
+      - name: fotos
+        label: Fotos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.descricao}"
+        fields:
+          - { name: imagem, label: Foto, type: image, required: true }
+          - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+
+  - name: obras-civis
+    label: "Obras Civis — Nossos trabalhos"
+    type: file
+    path: content/galerias/obras-civis.json
+    fields:
+      - { name: titulo, label: "Título da seção", type: string }
+      - name: fotos
+        label: Fotos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.descricao}"
+        fields:
+          - { name: imagem, label: Foto, type: image, required: true }
+          - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+
+  - name: documentacao-marinha
+    label: "Documentação Marinha — Nossos trabalhos"
+    type: file
+    path: content/galerias/documentacao-marinha.json
+    fields:
+      - { name: titulo, label: "Título da seção", type: string }
+      - name: fotos
+        label: Fotos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.descricao}"
+        fields:
+          - { name: imagem, label: Foto, type: image, required: true }
+          - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+
+  - name: defensas-portos
+    label: "Defensas de Portos — Nossos trabalhos"
+    type: file
+    path: content/galerias/defensas-portos.json
+    fields:
+      - { name: titulo, label: "Título da seção", type: string }
+      - name: fotos
+        label: Fotos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.descricao}"
+        fields:
+          - { name: imagem, label: Foto, type: image, required: true }
+          - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+
+  - name: agulha-magnetica
+    label: "Agulha Magnética — Certificações e equipamentos"
+    type: file
+    path: content/galerias/agulha-magnetica.json
+    fields:
+      - { name: titulo, label: "Título da seção", type: string }
+      - name: fotos
+        label: Fotos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.descricao}"
+        fields:
+          - { name: imagem, label: Foto, type: image, required: true }
+          - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+

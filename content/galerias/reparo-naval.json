@@ -1,0 +1,17 @@
+{
+  "titulo": "Nossos Trabalhos",
+  "fotos": [
+    {
+      "imagem": "/uploads/reparo-naval-reparo_naval.png",
+      "descricao": "Equipamento de mergulho profissional - Reparo Naval Safe Offshore"
+    },
+    {
+      "imagem": "/uploads/reparo-naval-reparo_naval2.png",
+      "descricao": "Mergulhadores em serviço subaquático - Reparo Naval Safe Offshore"
+    },
+    {
+      "imagem": "/uploads/reparo-naval-reparo_naval3.png",
+      "descricao": "Mergulhador realizando manutenção subaquática - Reparo Naval Safe Offshore"
+    }
+  ]
+}

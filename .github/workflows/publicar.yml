@@ -1,0 +1,66 @@
+# Publica o site na Locaweb a cada alteração na main (inclusive as feitas pelo painel de fotos).
+# 1. gera as galerias (scripts/galerias.py) e versiona as fotos otimizadas;
+# 2. envia por FTP só os arquivos que mudaram.
+#
+# Segredos necessários (Settings > Secrets and variables > Actions):
+#   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
+name: Publicar site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: publicar
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    env:
+      FTP_SERVER: ${{ secrets.FTP_SERVER }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Gerar galerias
+        run: |
+          pip install pillow==11.0.0
+          python scripts/galerias.py
+
+      - name: Versionar fotos otimizadas e páginas geradas
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A images/galerias '*.html'
+          if ! git diff --cached --quiet; then
+            git commit -m "Atualiza galerias de fotos [skip ci]"
+            git push
+          fi
+
+      - name: Enviar para a Locaweb
+        if: env.FTP_SERVER != ''
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ env.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          server-dir: /web/
+          exclude: |
+            **/.git*
+            **/.git*/**
+            .github/**
+            .pages.yml
+            content/**
+            images/galerias/manifesto.json
+            uploads/**
+            scripts/**
+            **/*.md
+            CNAME

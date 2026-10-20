@@ -1,0 +1,21 @@
+{
+  "titulo": "Nossos Trabalhos",
+  "fotos": [
+    {
+      "imagem": "/uploads/documentacao-marinha-fabricao_1.jpeg",
+      "descricao": "Fabricação de boia articulada - Safe Offshore"
+    },
+    {
+      "imagem": "/uploads/documentacao-marinha-fabricacao_2.jpeg",
+      "descricao": "Fabricação de estruturas metálicas - Safe Offshore"
+    },
+    {
+      "imagem": "/uploads/documentacao-marinha-fabricacao_6.jpeg",
+      "descricao": "Fabricação de equipamentos náuticos - Safe Offshore"
+    },
+    {
+      "imagem": "/uploads/documentacao-marinha-fabricacao_7.jpeg",
+      "descricao": "Produção de poitas - Safe Offshore"
+    }
+  ]
+}
