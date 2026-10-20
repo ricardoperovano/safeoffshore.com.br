@@ -25,6 +25,9 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 - Imagens das páginas de serviço servidas em WebP com width/height e lazy loading (`odizio_boia_articulada`: de 1,6 MB para 85 KB)
 - Fotos de hidrelétricas renomeadas (`hidreletricas-1..5.jpeg`)
 - Copyright atualizado para 2015-2026
+- Cliente EJA renomeado para Seatrium (antigo Estaleiro Jurong Aracruz)
+- Nome do CAMR corrigido para Centro de Auxílios à Navegação Almirante Moraes Rego
+- `sitemap.xml` sem `priority` (ignorado pelo Google), com 15 URLs
 - H1 da home passa a descrever o serviço ("Sinalização náutica, balizamento e serviços subaquáticos"); o slogan fica acima, como apoio
 - Links internos padronizados no formato de diretório (`servicos/` em vez de `servicos/index.html`), igual ao sitemap e ao canonical
 - Links do CAMR trocados do domínio antigo `mar.mil.br`, que não resolve mais, para a página do cadastro em `marinha.mil.br`
@@ -37,6 +40,7 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 - Flash de azul `#0066cc` e de botão branco na home antes do CSS principal carregar
 
 #### 🗑️ Removido
+- Serviço Alpinismo Industrial descontinuado a pedido do cliente: página, menus, formulário e sitemap (fotos movidas para `_material-cliente/`)
 - 110 arquivos do site antigo sem uso: CSS e JS legados, `modules/`, `components/`, `fonts/`, bordas e separadores, `escolher-versao.html` e `.tmp`
 - Fotos, logos, PDF de apresentação e áudios sem uso foram movidos para `_material-cliente/`, bloqueado no `robots.txt` (não publicar)
 
