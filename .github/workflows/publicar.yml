@@ -1,6 +1,6 @@
 # Publica o site na Locaweb a cada alteração na main (inclusive as feitas pelo painel de fotos).
 # 1. gera as galerias (scripts/galerias.py) e versiona as fotos otimizadas;
-# 2. envia por FTP só os arquivos que mudaram.
+# 2. envia por FTPS (lftp) só os arquivos que mudaram desde o último envio.
 #
 # Segredos necessários (Settings > Secrets and variables > Actions):
 #   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD
@@ -10,6 +10,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      completo:
+        description: "Reenviar todos os arquivos (use no primeiro envio)"
+        type: boolean
+        default: false
 
 concurrency:
   group: publicar
@@ -25,6 +30,8 @@ jobs:
       FTP_SERVER: ${{ secrets.FTP_SERVER }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # histórico completo para datar os arquivos pelo último commit
 
       - uses: actions/setup-python@v5
         with:
@@ -47,25 +54,25 @@ jobs:
 
       - name: Enviar para a Locaweb
         if: env.FTP_SERVER != ''
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
-        with:
-          server: ${{ env.FTP_SERVER }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          # a Locaweb derruba a conexão de dados em FTP sem criptografia
-          protocol: ftps
-          security: loose
-          server-dir: /web/
-          exclude: |
-            **/.git*
-            **/.git*/**
-            .github/**
-            .pages.yml
-            content/**
-            images/galerias/manifesto.json
-            uploads/**
-            scripts/**
-            **/*.md
-            CNAME
-            # enviado à mão até o redirecionamento de HTTPS ser testado no servidor
-            web.config
+        env:
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          COMPLETO: ${{ inputs.completo }}
+        run: |
+          sudo apt-get install -y -qq lftp > /dev/null
+          # cada arquivo fica com a data do último commit que o alterou; o lftp envia
+          # só o que for mais novo que a cópia do servidor (que tem a data do upload)
+          git ls-files -z | while IFS= read -r -d '' f; do
+            touch -d "@$(git log -1 --format=%ct -- "$f")" "$f"
+          done
+          [ "$COMPLETO" = "true" ] && SO_NOVOS="" || SO_NOVOS="--only-newer"
+          lftp -u "$FTP_USERNAME,$FTP_PASSWORD" "$FTP_SERVER" -e "
+            set ftp:ssl-force yes; set ftp:ssl-protect-data yes; set ssl:verify-certificate no;
+            set net:max-retries 3; set net:timeout 30;
+            mirror --reverse $SO_NOVOS --no-perms --parallel=4 --verbose \
+              --exclude-glob .git* --exclude-glob .git/ --exclude-glob .github/ --exclude-glob .pages.yml \
+              --exclude-glob content/ --exclude-glob uploads/ --exclude-glob scripts/ \
+              --exclude-glob *.md --exclude-glob CNAME --exclude-glob images/galerias/manifesto.json \
+              --exclude-glob web.config \
+              ./ /web/;
+            bye"
