@@ -20,6 +20,22 @@ document.querySelectorAll('picture > img').forEach(img => {
     if (img.complete && img.naturalWidth === 0 && img.currentSrc) useImageFallback(img);
 });
 
+/* ========== Analytics: cliques de contato ========== */
+// Registra no GA4 os contatos iniciados (WhatsApp, telefone, e-mail); nada acontece sem o gtag.
+function trackContact(method, location) {
+    if (typeof gtag === 'function') gtag('event', 'contato', { metodo: method, local: location });
+}
+
+document.addEventListener('click', function(e) {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const href = link.getAttribute('href');
+    const location = link.classList.contains('whatsapp-float') ? 'botao_flutuante' : (link.closest('footer') ? 'rodape' : 'pagina');
+    if (href.includes('wa.me/')) trackContact('whatsapp', location);
+    else if (href.startsWith('tel:')) trackContact('telefone', location);
+    else if (href.startsWith('mailto:')) trackContact('email', location);
+});
+
 // DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
@@ -521,6 +537,8 @@ function initContactForm() {
             field('message')
         ];
         const text = lines.filter(line => line !== null).join('\n');
+
+        trackContact(channel === 'email' ? 'email' : 'whatsapp', 'formulario_orcamento');
 
         if (channel === 'email') {
             const subject = `Orçamento${field('service') ? ' - ' + field('service') : ''} (site)`;
