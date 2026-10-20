@@ -76,5 +76,5 @@ jobs:
               --exclude-glob web.config \
               ./ /web/;
             bye"
-          echo "Arquivos enviados: $(grep -c '^put' lftp-envio.log 2>/dev/null || echo 0)"
-          grep '^put' lftp-envio.log 2>/dev/null | sed -E 's|.* (/web/[^ ]*)$|\1|' | head -100 || true
+          echo "Operações no servidor:"
+          cat lftp-envio.log 2>/dev/null || echo "(nenhum arquivo alterado)"
