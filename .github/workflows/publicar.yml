@@ -73,7 +73,6 @@ jobs:
               --exclude-glob .git* --exclude-glob .git/ --exclude-glob .github/ --exclude-glob .pages.yml \
               --exclude-glob content/ --exclude-glob uploads/ --exclude-glob scripts/ \
               --exclude-glob *.md --exclude-glob CNAME --exclude-glob images/galerias/manifesto.json \
-              --exclude-glob web.config \
               ./ /web/;
             bye"
           echo "Operações no servidor:"
