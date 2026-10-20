@@ -68,11 +68,13 @@ jobs:
           [ "$COMPLETO" = "true" ] && SO_NOVOS="" || SO_NOVOS="--only-newer"
           lftp -u "$FTP_USERNAME,$FTP_PASSWORD" "$FTP_SERVER" -e "
             set ftp:ssl-force yes; set ftp:ssl-protect-data yes; set ssl:verify-certificate no;
-            set net:max-retries 3; set net:timeout 30;
-            mirror --reverse $SO_NOVOS --no-perms --parallel=4 --verbose \
+            set cmd:fail-exit yes; set net:max-retries 3; set net:timeout 30;
+            mirror --reverse $SO_NOVOS --no-perms --parallel=4 --log=lftp-envio.log \
               --exclude-glob .git* --exclude-glob .git/ --exclude-glob .github/ --exclude-glob .pages.yml \
               --exclude-glob content/ --exclude-glob uploads/ --exclude-glob scripts/ \
               --exclude-glob *.md --exclude-glob CNAME --exclude-glob images/galerias/manifesto.json \
               --exclude-glob web.config \
               ./ /web/;
             bye"
+          echo "Arquivos enviados: $(grep -c '^put' lftp-envio.log 2>/dev/null || echo 0)"
+          grep '^put' lftp-envio.log 2>/dev/null | sed -E 's|.* (/web/[^ ]*)$|\1|' | head -100 || true
