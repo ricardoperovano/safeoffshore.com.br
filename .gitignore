@@ -71,3 +71,8 @@ tmp/
 *.tar
 *.gz
 *.7z
+
+# Material do cliente (não publicar)
+_material-cliente/
+reports/
+research_notes/

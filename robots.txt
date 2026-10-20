@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /_material-cliente/
 
-Sitemap: https://www.safeoffshore.com.br/sitemap.xml
+Sitemap: https://safeoffshore.com.br/sitemap.xml
