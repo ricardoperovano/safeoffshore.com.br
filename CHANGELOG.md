@@ -18,12 +18,16 @@ e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR
 - `sitemap.xml` e `robots.txt`
 - Meta description nas 6 páginas que não tinham
 - Dados estruturados LocalBusiness com endereço e telefones na home
+- Tag canonical em todas as páginas, apontando para `https://www.safeoffshore.com.br/...`
 
 #### 🔧 Alterado
 - Botões, menu ativo, sublinhados, ícones, checks e títulos do rodapé passam a usar o laranja da marca
 - Imagens das páginas de serviço servidas em WebP com width/height e lazy loading (`odizio_boia_articulada`: de 1,6 MB para 85 KB)
 - Fotos de hidrelétricas renomeadas (`hidreletricas-1..5.jpeg`)
 - Copyright atualizado para 2015-2026
+- H1 da home passa a descrever o serviço ("Sinalização náutica, balizamento e serviços subaquáticos"); o slogan fica acima, como apoio
+- Links internos padronizados no formato de diretório (`servicos/` em vez de `servicos/index.html`), igual ao sitemap e ao canonical
+- Links do CAMR trocados do domínio antigo `mar.mil.br`, que não resolve mais, para a página do cadastro em `marinha.mil.br`
 
 #### 🐛 Corrigido
 - Ícones vazios em "100+ Clientes" e "10+ Anos" na home (símbolos ausentes no sprite)

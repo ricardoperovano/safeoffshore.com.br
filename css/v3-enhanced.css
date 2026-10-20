@@ -40,11 +40,19 @@
     z-index: 1;
 }
 
+.hero-v3-text .hero-kicker {
+    font-family: var(--font-primary);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--accent-light);
+    margin-bottom: 0.75rem;
+}
+
 .hero-v3-text h1 {
-    font-size: 3.5rem;
+    font-size: 2.9rem;
     color: var(--text-light);
-    margin-bottom: 1rem;
-    line-height: 1.1;
+    margin-bottom: 1.25rem;
+    line-height: 1.12;
 }
 
 .hero-v3-text .highlight {
@@ -761,7 +769,7 @@
     }
 
     .hero-v3-text h1 {
-        font-size: 2.5rem;
+        font-size: 2.1rem;
     }
 
     .hero-v3-stats {
