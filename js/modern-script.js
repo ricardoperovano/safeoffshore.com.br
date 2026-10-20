@@ -2,6 +2,24 @@
    Safe Offshore - Modern JavaScript
    ======================================== */
 
+/* ========== WebP Fallback ========== */
+// Se o servidor não entregar a versão .webp de um <picture> (ex.: IIS sem o
+// MIME registrado), remove o <source> para o navegador usar o <img src>.
+function useImageFallback(img) {
+    const picture = img.parentElement;
+    if (!picture || picture.tagName !== 'PICTURE' || !picture.querySelector('source')) return;
+    picture.querySelectorAll('source').forEach(source => source.remove());
+    img.src = img.getAttribute('src');
+}
+
+document.addEventListener('error', function(e) {
+    if (e.target.tagName === 'IMG') useImageFallback(e.target);
+}, true);
+
+document.querySelectorAll('picture > img').forEach(img => {
+    if (img.complete && img.naturalWidth === 0 && img.currentSrc) useImageFallback(img);
+});
+
 // DOM Ready
 document.addEventListener('DOMContentLoaded', function() {
     initMobileMenu();
