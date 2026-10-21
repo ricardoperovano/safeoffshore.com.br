@@ -6,6 +6,9 @@ galeria, este script:
   2. reescreve o HTML entre os marcadores <!-- galeria:<nome> --> e <!-- /galeria:<nome> -->
      nas páginas configuradas em GALERIAS.
 
+Páginas em /en/ usam os campos com sufixo "_en" (titulo_en, descricao_en, legenda_en,
+local_en); se estiverem vazios, usam o texto em português.
+
 Uso: python scripts/galerias.py   (requer Pillow)
 """
 import hashlib
@@ -24,16 +27,16 @@ MANIFESTO = SAIDA / "manifesto.json"
 
 # modelo -> como a galeria é desenhada; paginas -> (arquivo, variante)
 GALERIAS = {
-    "hidreletricas": {"rotulo": "Hidrelétricas", "modelo": "grade", "paginas": [("servicos/hidreletricas/index.html", None)]},
-    "apoio-subaquatico": {"rotulo": "Apoio Subaquático", "modelo": "grade", "paginas": [("servicos/apoio-subaquatico/index.html", None)]},
-    "reparo-naval": {"rotulo": "Reparo Naval", "modelo": "grade", "paginas": [("servicos/reparo-naval/index.html", None)]},
-    "obras-civis": {"rotulo": "Obras Civis", "modelo": "grade", "paginas": [("servicos/obras-civis/index.html", None)]},
-    "documentacao-marinha": {"rotulo": "Documentação Marinha", "modelo": "grade", "paginas": [("servicos/documentacao-marinha/index.html", None)]},
-    "agulha-magnetica": {"rotulo": "Agulha Magnética", "modelo": "grade", "paginas": [("servicos/agulha-magnetica-e-barometro-aneroide/index.html", None)]},
-    "defensas-portos": {"rotulo": "Defensas de Portos", "modelo": "grade", "paginas": [("servicos/defensas-portos/index.html", None)]},
-    "sinalizacao-nautica": {"rotulo": "Sinalização Náutica", "modelo": "legendas", "paginas": [("servicos/sinalizacao-nautica/index.html", None)]},
-    "projetos": {"rotulo": "Projetos Realizados", "modelo": "projetos", "paginas": [("index.html", None)]},
-    "clientes": {"rotulo": "Clientes", "modelo": "clientes", "paginas": [("principais-clientes-1/index.html", "pagina"), ("index.html", "home")]},
+    "hidreletricas": {"rotulo": "Hidrelétricas", "modelo": "grade", "paginas": [("servicos/hidreletricas/index.html", None), ("en/services/hydropower-plants/index.html", None)]},
+    "apoio-subaquatico": {"rotulo": "Apoio Subaquático", "modelo": "grade", "paginas": [("servicos/apoio-subaquatico/index.html", None), ("en/services/underwater-services/index.html", None)]},
+    "reparo-naval": {"rotulo": "Reparo Naval", "modelo": "grade", "paginas": [("servicos/reparo-naval/index.html", None), ("en/services/underwater-ship-repair/index.html", None)]},
+    "obras-civis": {"rotulo": "Obras Civis", "modelo": "grade", "paginas": [("servicos/obras-civis/index.html", None), ("en/services/underwater-civil-works/index.html", None)]},
+    "documentacao-marinha": {"rotulo": "Documentação Marinha", "modelo": "grade", "paginas": [("servicos/documentacao-marinha/index.html", None), ("en/services/brazilian-navy-permits/index.html", None)]},
+    "agulha-magnetica": {"rotulo": "Agulha Magnética", "modelo": "grade", "paginas": [("servicos/agulha-magnetica-e-barometro-aneroide/index.html", None), ("en/services/magnetic-compass-adjustment/index.html", None)]},
+    "defensas-portos": {"rotulo": "Defensas de Portos", "modelo": "grade", "paginas": [("servicos/defensas-portos/index.html", None), ("en/services/port-fenders/index.html", None)]},
+    "sinalizacao-nautica": {"rotulo": "Sinalização Náutica", "modelo": "legendas", "paginas": [("servicos/sinalizacao-nautica/index.html", None), ("en/services/aids-to-navigation/index.html", None)]},
+    "projetos": {"rotulo": "Projetos Realizados", "modelo": "projetos", "paginas": [("index.html", None), ("en/index.html", None)]},
+    "clientes": {"rotulo": "Clientes", "modelo": "clientes", "paginas": [("principais-clientes-1/index.html", "pagina"), ("index.html", "home"), ("en/clients/index.html", "pagina"), ("en/index.html", "home")]},
 }
 
 LARGURA_MAXIMA = {"grade": 1600, "legendas": 1600, "projetos": 1600, "clientes": 400}
@@ -98,25 +101,33 @@ def picture(prefixo, foto, alt, extra=""):
             f'src="{prefixo}{src}" alt="{html.escape(alt)}"{extra}></picture>')
 
 
-def renderizar(modelo, variante, dados, itens, prefixo, rotulo):
+def texto(dados, campo, ingles, padrao=""):
+    """Campo no idioma da página; em inglês, cai para o português se não houver tradução."""
+    if ingles and dados.get(campo + "_en"):
+        return dados[campo + "_en"]
+    return dados.get(campo, padrao)
+
+
+def renderizar(modelo, variante, dados, itens, prefixo, rotulo, ingles):
     """Devolve as linhas de HTML (sem indentação base) para a galeria."""
     e = html.escape
+    sufixo = "Safe Offshore"
     if not itens:
         return []
     if modelo == "grade":
-        titulo = dados.get("titulo", "Nossos Trabalhos")
+        titulo = texto(dados, "titulo", ingles, "Nossos Trabalhos")
         linhas = ([f"<h3>{e(titulo)}</h3>"] if titulo else []) + ['<div class="service-images-grid">']
         for item, foto in itens:
-            alt = item.get("descricao") or f"{rotulo} - Safe Offshore"
+            alt = texto(item, "descricao", ingles) or f"{rotulo} - {sufixo}"
             linhas += ['    <div class="service-image-item">', "        " + picture(prefixo, foto, alt), "    </div>"]
         return linhas + ["</div>"]
     if modelo == "legendas":
         linhas = []
-        if dados.get("titulo"):
-            linhas += [f'<h3>{e(dados["titulo"])}</h3>']
+        if texto(dados, "titulo", ingles):
+            linhas += [f'<h3>{e(texto(dados, "titulo", ingles))}</h3>']
         linhas += ['<div class="service-operations-grid">']
         for item, foto in itens:
-            legenda = item.get("legenda") or ""
+            legenda = texto(item, "legenda", ingles)
             linhas += ['    <div class="operation-item">',
                        "        " + picture(prefixo, foto, f"{legenda} - Safe Offshore" if legenda else f"{rotulo} - Safe Offshore")]
             if legenda:
@@ -126,8 +137,8 @@ def renderizar(modelo, variante, dados, itens, prefixo, rotulo):
     if modelo == "projetos":
         linhas = ['<div class="portfolio-grid">']
         for item, foto in itens:
-            titulo, local = item.get("titulo") or "", item.get("local") or ""
-            linhas += ['    <div class="portfolio-item">', "        " + picture(prefixo, foto, titulo or "Projeto"),
+            titulo, local = texto(item, "titulo", ingles), texto(item, "local", ingles)
+            linhas += ['    <div class="portfolio-item">', "        " + picture(prefixo, foto, titulo or ("Project" if ingles else "Projeto")),
                        '        <div class="portfolio-overlay">', "            <div>",
                        f"                <h3>{e(titulo)}</h3>", f"                <p>{e(local)}</p>",
                        "            </div>", "        </div>", "    </div>"]
@@ -138,7 +149,7 @@ def renderizar(modelo, variante, dados, itens, prefixo, rotulo):
             itens = itens[:CLIENTES_NA_HOME]
         linhas = ['<div class="clients-grid">']
         for item, foto in itens:
-            linhas += [f'    <div class="{classe}">', "        " + picture(prefixo, foto, item.get("nome") or "Cliente"), "    </div>"]
+            linhas += [f'    <div class="{classe}">', "        " + picture(prefixo, foto, texto(item, "nome", ingles) or "Cliente"), "    </div>"]
         return linhas + ["</div>"]
     raise ValueError(f"modelo desconhecido: {modelo}")
 
@@ -179,7 +190,8 @@ def main():
             itens.append((item, otimizar(origem, nome, LARGURA_MAXIMA[modelo], manifesto, usados)))
         for pagina, variante in config["paginas"]:
             prefixo = "../" * pagina.count("/")
-            if substituir(pagina, nome, renderizar(modelo, variante, dados, itens, prefixo, config["rotulo"])):
+            ingles = pagina.startswith("en/")
+            if substituir(pagina, nome, renderizar(modelo, variante, dados, itens, prefixo, config["rotulo"], ingles)):
                 alteradas.append(pagina)
     # remove versões otimizadas de fotos que saíram das galerias
     for arquivo in SAIDA.rglob("*"):

@@ -6,7 +6,8 @@
     },
     {
       "imagem": "/uploads/clientes-LOGO-JURONG82b7.jpg",
-      "nome": "Seatrium (antigo Estaleiro Jurong Aracruz)"
+      "nome": "Seatrium (antigo Estaleiro Jurong Aracruz)",
+      "nome_en": "Seatrium (formerly Jurong Aracruz Shipyard)"
     },
     {
       "imagem": "/uploads/clientes-camorim82b7.jpg",
@@ -22,7 +23,8 @@
     },
     {
       "imagem": "/uploads/clientes-astromaritima82b7.jpg",
-      "nome": "Astro Marítima"
+      "nome": "Astro Marítima",
+      "nome_en": "Astro Marítima"
     },
     {
       "imagem": "/uploads/clientes-OAS82b7.jpg",

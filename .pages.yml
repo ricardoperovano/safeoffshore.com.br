@@ -1,5 +1,5 @@
 # Painel de fotos do site (Pages CMS: https://app.pagescms.org)
-# Cada item abaixo edita um arquivo em content/galerias/. Ao salvar, o GitHub Action
+# Cada item abaixo edita um arquivo em content/galerias/ (campos *_en vão para o site em inglês). Ao salvar, o GitHub Action
 # "Publicar site" otimiza as fotos, atualiza as páginas e envia para a Locaweb.
 
 media:
@@ -25,6 +25,8 @@ content:
           - { name: imagem, label: Foto, type: image, required: true }
           - { name: titulo, label: "Serviço (ex.: Sinalização Náutica)", type: string, required: true }
           - { name: local, label: "Local (ex.: Porto de Vitória - ES)", type: string }
+          - { name: titulo_en, label: "Serviço em inglês (ex.: Aids to Navigation)", type: string }
+          - { name: local_en, label: "Local em inglês (ex.: Port of Vitória, Brazil)", type: string }
 
   - name: clientes
     label: "Clientes — logos"
@@ -41,6 +43,7 @@ content:
         fields:
           - { name: imagem, label: Logo, type: image, required: true }
           - { name: nome, label: Nome do cliente, type: string, required: true }
+          - { name: nome_en, label: "Nome em inglês (só se for diferente)", type: string }
 
   - name: sinalizacao-nautica
     label: "Sinalização Náutica — Operações de manutenção"
@@ -48,6 +51,7 @@ content:
     path: content/galerias/sinalizacao-nautica.json
     fields:
       - { name: titulo, label: Título da seção, type: string }
+      - { name: titulo_en, label: "Título da seção em inglês", type: string }
       - name: fotos
         label: Fotos
         type: object
@@ -58,6 +62,7 @@ content:
         fields:
           - { name: imagem, label: Foto, type: image, required: true }
           - { name: legenda, label: "Legenda (aparece embaixo da foto)", type: string, required: true }
+          - { name: legenda_en, label: "Legenda em inglês (se vazio, usa a de cima)", type: string }
 
   - name: hidreletricas
     label: "Hidrelétricas — Nossos trabalhos"
@@ -65,6 +70,7 @@ content:
     path: content/galerias/hidreletricas.json
     fields:
       - { name: titulo, label: "Título da seção", type: string }
+      - { name: titulo_en, label: "Título da seção em inglês", type: string }
       - name: fotos
         label: Fotos
         type: object
@@ -75,6 +81,7 @@ content:
         fields:
           - { name: imagem, label: Foto, type: image, required: true }
           - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+          - { name: descricao_en, label: "Descrição em inglês (site em inglês; se vazio, usa a de cima)", type: string }
 
   - name: apoio-subaquatico
     label: "Apoio Subaquático — Nossos trabalhos"
@@ -82,6 +89,7 @@ content:
     path: content/galerias/apoio-subaquatico.json
     fields:
       - { name: titulo, label: "Título da seção", type: string }
+      - { name: titulo_en, label: "Título da seção em inglês", type: string }
       - name: fotos
         label: Fotos
         type: object
@@ -92,6 +100,7 @@ content:
         fields:
           - { name: imagem, label: Foto, type: image, required: true }
           - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+          - { name: descricao_en, label: "Descrição em inglês (site em inglês; se vazio, usa a de cima)", type: string }
 
   - name: reparo-naval
     label: "Reparo Naval — Nossos trabalhos"
@@ -99,6 +108,7 @@ content:
     path: content/galerias/reparo-naval.json
     fields:
       - { name: titulo, label: "Título da seção", type: string }
+      - { name: titulo_en, label: "Título da seção em inglês", type: string }
       - name: fotos
         label: Fotos
         type: object
@@ -109,6 +119,7 @@ content:
         fields:
           - { name: imagem, label: Foto, type: image, required: true }
           - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+          - { name: descricao_en, label: "Descrição em inglês (site em inglês; se vazio, usa a de cima)", type: string }
 
   - name: obras-civis
     label: "Obras Civis — Nossos trabalhos"
@@ -116,6 +127,7 @@ content:
     path: content/galerias/obras-civis.json
     fields:
       - { name: titulo, label: "Título da seção", type: string }
+      - { name: titulo_en, label: "Título da seção em inglês", type: string }
       - name: fotos
         label: Fotos
         type: object
@@ -126,6 +138,7 @@ content:
         fields:
           - { name: imagem, label: Foto, type: image, required: true }
           - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+          - { name: descricao_en, label: "Descrição em inglês (site em inglês; se vazio, usa a de cima)", type: string }
 
   - name: documentacao-marinha
     label: "Documentação Marinha — Nossos trabalhos"
@@ -133,6 +146,7 @@ content:
     path: content/galerias/documentacao-marinha.json
     fields:
       - { name: titulo, label: "Título da seção", type: string }
+      - { name: titulo_en, label: "Título da seção em inglês", type: string }
       - name: fotos
         label: Fotos
         type: object
@@ -143,6 +157,7 @@ content:
         fields:
           - { name: imagem, label: Foto, type: image, required: true }
           - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+          - { name: descricao_en, label: "Descrição em inglês (site em inglês; se vazio, usa a de cima)", type: string }
 
   - name: defensas-portos
     label: "Defensas de Portos — Nossos trabalhos"
@@ -150,6 +165,7 @@ content:
     path: content/galerias/defensas-portos.json
     fields:
       - { name: titulo, label: "Título da seção", type: string }
+      - { name: titulo_en, label: "Título da seção em inglês", type: string }
       - name: fotos
         label: Fotos
         type: object
@@ -160,6 +176,7 @@ content:
         fields:
           - { name: imagem, label: Foto, type: image, required: true }
           - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+          - { name: descricao_en, label: "Descrição em inglês (site em inglês; se vazio, usa a de cima)", type: string }
 
   - name: agulha-magnetica
     label: "Agulha Magnética — Certificações e equipamentos"
@@ -167,6 +184,7 @@ content:
     path: content/galerias/agulha-magnetica.json
     fields:
       - { name: titulo, label: "Título da seção", type: string }
+      - { name: titulo_en, label: "Título da seção em inglês", type: string }
       - name: fotos
         label: Fotos
         type: object
@@ -177,4 +195,5 @@ content:
         fields:
           - { name: imagem, label: Foto, type: image, required: true }
           - { name: descricao, label: "Descrição da foto (para o Google e leitores de tela)", type: string, required: true }
+          - { name: descricao_en, label: "Descrição em inglês (site em inglês; se vazio, usa a de cima)", type: string }
 

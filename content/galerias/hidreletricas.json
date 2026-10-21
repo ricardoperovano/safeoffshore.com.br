@@ -1,25 +1,31 @@
 {
   "titulo": "Nossos Trabalhos",
+  "titulo_en": "Our Work",
   "fotos": [
     {
       "imagem": "/uploads/hidreletricas-hidreletricas-1.jpeg",
-      "descricao": "Turbina de hidrelétrica - Safe Offshore"
+      "descricao": "Turbina de hidrelétrica - Safe Offshore",
+      "descricao_en": "Hydropower plant turbine - Safe Offshore"
     },
     {
       "imagem": "/uploads/hidreletricas-hidreletricas-2.jpeg",
-      "descricao": "Equipamentos de hidrelétrica - Safe Offshore"
+      "descricao": "Equipamentos de hidrelétrica - Safe Offshore",
+      "descricao_en": "Hydropower plant equipment - Safe Offshore"
     },
     {
       "imagem": "/uploads/hidreletricas-hidreletricas-3.jpeg",
-      "descricao": "Turbina e tubulações - Safe Offshore"
+      "descricao": "Turbina e tubulações - Safe Offshore",
+      "descricao_en": "Turbine and penstock - Safe Offshore"
     },
     {
       "imagem": "/uploads/hidreletricas-hidreletricas-4.jpeg",
-      "descricao": "Manutenção de turbinas - Safe Offshore"
+      "descricao": "Manutenção de turbinas - Safe Offshore",
+      "descricao_en": "Turbine maintenance - Safe Offshore"
     },
     {
       "imagem": "/uploads/hidreletricas-hidreletricas-5.jpeg",
-      "descricao": "Detalhe de turbina hidrelétrica - Safe Offshore"
+      "descricao": "Detalhe de turbina hidrelétrica - Safe Offshore",
+      "descricao_en": "Hydropower turbine detail - Safe Offshore"
     }
   ]
 }

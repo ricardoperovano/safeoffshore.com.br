@@ -1,21 +1,26 @@
 {
   "titulo": "Nossos Trabalhos",
+  "titulo_en": "Our Work",
   "fotos": [
     {
       "imagem": "/uploads/documentacao-marinha-fabricao_1.jpeg",
-      "descricao": "Fabricação de boia articulada - Safe Offshore"
+      "descricao": "Fabricação de boia articulada - Safe Offshore",
+      "descricao_en": "Articulated buoy fabrication - Safe Offshore"
     },
     {
       "imagem": "/uploads/documentacao-marinha-fabricacao_2.jpeg",
-      "descricao": "Fabricação de estruturas metálicas - Safe Offshore"
+      "descricao": "Fabricação de estruturas metálicas - Safe Offshore",
+      "descricao_en": "Steel structure fabrication - Safe Offshore"
     },
     {
       "imagem": "/uploads/documentacao-marinha-fabricacao_6.jpeg",
-      "descricao": "Fabricação de equipamentos náuticos - Safe Offshore"
+      "descricao": "Fabricação de equipamentos náuticos - Safe Offshore",
+      "descricao_en": "Nautical equipment fabrication - Safe Offshore"
     },
     {
       "imagem": "/uploads/documentacao-marinha-fabricacao_7.jpeg",
-      "descricao": "Produção de poitas - Safe Offshore"
+      "descricao": "Produção de poitas - Safe Offshore",
+      "descricao_en": "Mooring sinker production - Safe Offshore"
     }
   ]
 }

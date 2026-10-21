@@ -1,17 +1,21 @@
 {
   "titulo": "Certificações e Equipamentos",
+  "titulo_en": "Certifications and Equipment",
   "fotos": [
     {
       "imagem": "/uploads/agulha-magnetica-certificado_182b7.png",
-      "descricao": "Certificado Agulha Magnética"
+      "descricao": "Certificado Agulha Magnética",
+      "descricao_en": "Magnetic compass certificate"
     },
     {
       "imagem": "/uploads/agulha-magnetica-certificado82b7.png",
-      "descricao": "Certificação de Serviços"
+      "descricao": "Certificação de Serviços",
+      "descricao_en": "Service certification"
     },
     {
       "imagem": "/uploads/agulha-magnetica-ns-7.5-40082b7.jpg",
-      "descricao": "Equipamento Náutico"
+      "descricao": "Equipamento Náutico",
+      "descricao_en": "Nautical equipment"
     }
   ]
 }

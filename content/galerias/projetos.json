@@ -3,17 +3,23 @@
     {
       "imagem": "/uploads/projetos-55b14eb5-ef38-1072-b53b-1d5166b49d96.jpg",
       "titulo": "Sinalização Náutica",
-      "local": "Porto de Vitória - ES"
+      "local": "Porto de Vitória - ES",
+      "titulo_en": "Aids to Navigation",
+      "local_en": "Port of Vitória, Brazil"
     },
     {
       "imagem": "/uploads/projetos-b132f483-2500-a6d8-edc7-79d446bfcdd4.jpg",
       "titulo": "Balizamento",
-      "local": "Canal de Acesso"
+      "local": "Canal de Acesso",
+      "titulo_en": "Buoyage",
+      "local_en": "Access Channel"
     },
     {
       "imagem": "/uploads/projetos-IMG_20170722_062927842.jpg",
       "titulo": "Apoio Subaquático",
-      "local": "Inspeção e Manutenção"
+      "local": "Inspeção e Manutenção",
+      "titulo_en": "Underwater Support",
+      "local_en": "Inspection and Maintenance"
     }
   ]
 }

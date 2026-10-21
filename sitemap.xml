@@ -1,63 +1,237 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://safeoffshore.com.br/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/"/>
+  </url>
   <url>
     <loc>https://safeoffshore.com.br/about-us/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/about-us/"/>
   </url>
   <url>
     <loc>https://safeoffshore.com.br/contato/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/contato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/contato/"/>
   </url>
   <url>
-    <loc>https://safeoffshore.com.br/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <loc>https://safeoffshore.com.br/en/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/about-us/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/about-us/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/about-us/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/clients/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/principais-clientes-1/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/clients/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/principais-clientes-1/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/contact/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/contato/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/contact/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/contato/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/insights/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/insights/aids-to-navigation-brazil-normam-601/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/insights/commercial-diving-services-brazil/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/insights/in-water-hull-cleaning-brazil-normam-401/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/insights/magnetic-compass-adjustment-brazil/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/insights/marine-works-permits-brazil-normam-303/</loc>
+    <lastmod>2026-10-21</lastmod>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/services/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/services/aids-to-navigation/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/sinalizacao-nautica/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/aids-to-navigation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/sinalizacao-nautica/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/services/brazilian-navy-permits/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/documentacao-marinha/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/brazilian-navy-permits/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/documentacao-marinha/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/services/hydropower-plants/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/hidreletricas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/hydropower-plants/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/hidreletricas/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/services/magnetic-compass-adjustment/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/agulha-magnetica-e-barometro-aneroide/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/magnetic-compass-adjustment/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/agulha-magnetica-e-barometro-aneroide/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/services/navigation-aids-equipment/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/navigation-aids-equipment/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/services/navigation-aids-equipment/amrso-3000-mooring-buoy/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/boia-amarracao-amrso-3000/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/navigation-aids-equipment/amrso-3000-mooring-buoy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/boia-amarracao-amrso-3000/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/services/port-fenders/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/defensas-portos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/port-fenders/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/defensas-portos/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/services/underwater-civil-works/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/obras-civis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/underwater-civil-works/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/obras-civis/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/services/underwater-services/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/apoio-subaquatico/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/underwater-services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/apoio-subaquatico/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/en/services/underwater-ship-repair/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/reparo-naval/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/underwater-ship-repair/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/reparo-naval/"/>
   </url>
   <url>
     <loc>https://safeoffshore.com.br/principais-clientes-1/</loc>
-    <lastmod>2026-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://safeoffshore.com.br/servicos/agulha-magnetica-e-barometro-aneroide/</loc>
-    <lastmod>2026-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://safeoffshore.com.br/servicos/apoio-subaquatico/</loc>
-    <lastmod>2026-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/boia-amarracao-amrso-3000/</loc>
-    <lastmod>2026-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/</loc>
-    <lastmod>2026-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://safeoffshore.com.br/servicos/defensas-portos/</loc>
-    <lastmod>2026-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://safeoffshore.com.br/servicos/documentacao-marinha/</loc>
-    <lastmod>2026-10-20</lastmod>
-  </url>
-  <url>
-    <loc>https://safeoffshore.com.br/servicos/hidreletricas/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/principais-clientes-1/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/clients/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/principais-clientes-1/"/>
   </url>
   <url>
     <loc>https://safeoffshore.com.br/servicos/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/servicos/agulha-magnetica-e-barometro-aneroide/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/agulha-magnetica-e-barometro-aneroide/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/magnetic-compass-adjustment/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/agulha-magnetica-e-barometro-aneroide/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/servicos/apoio-subaquatico/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/apoio-subaquatico/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/underwater-services/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/apoio-subaquatico/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/navigation-aids-equipment/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/boia-amarracao-amrso-3000/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/boia-amarracao-amrso-3000/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/navigation-aids-equipment/amrso-3000-mooring-buoy/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/comercio-de-equipamentos-de-sinalizacao-nautica/boia-amarracao-amrso-3000/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/servicos/defensas-portos/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/defensas-portos/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/port-fenders/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/defensas-portos/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/servicos/documentacao-marinha/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/documentacao-marinha/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/brazilian-navy-permits/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/documentacao-marinha/"/>
+  </url>
+  <url>
+    <loc>https://safeoffshore.com.br/servicos/hidreletricas/</loc>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/hidreletricas/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/hydropower-plants/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/hidreletricas/"/>
   </url>
   <url>
     <loc>https://safeoffshore.com.br/servicos/obras-civis/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/obras-civis/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/underwater-civil-works/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/obras-civis/"/>
   </url>
   <url>
     <loc>https://safeoffshore.com.br/servicos/reparo-naval/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/reparo-naval/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/underwater-ship-repair/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/reparo-naval/"/>
   </url>
   <url>
     <loc>https://safeoffshore.com.br/servicos/sinalizacao-nautica/</loc>
-    <lastmod>2026-10-20</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://safeoffshore.com.br/servicos/sinalizacao-nautica/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://safeoffshore.com.br/en/services/aids-to-navigation/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://safeoffshore.com.br/servicos/sinalizacao-nautica/"/>
   </url>
 </urlset>

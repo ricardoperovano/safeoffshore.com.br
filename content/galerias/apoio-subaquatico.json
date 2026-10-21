@@ -1,21 +1,26 @@
 {
   "titulo": "Nossos Trabalhos",
+  "titulo_en": "Our Work",
   "fotos": [
     {
       "imagem": "/uploads/apoio-subaquatico-merg282b7.png",
-      "descricao": "Mergulho Profissional - Safe Offshore"
+      "descricao": "Mergulho Profissional - Safe Offshore",
+      "descricao_en": "Commercial diving - Safe Offshore"
     },
     {
       "imagem": "/uploads/apoio-subaquatico-merg382b7.png",
-      "descricao": "Apoio Subaquático"
+      "descricao": "Apoio Subaquático",
+      "descricao_en": "Underwater support"
     },
     {
       "imagem": "/uploads/apoio-subaquatico-Imagem182b7.jpg",
-      "descricao": "Serviços de Mergulho"
+      "descricao": "Serviços de Mergulho",
+      "descricao_en": "Diving services"
     },
     {
       "imagem": "/uploads/apoio-subaquatico-Imagem382b7.jpg",
-      "descricao": "Inspeção Subaquática"
+      "descricao": "Inspeção Subaquática",
+      "descricao_en": "Underwater inspection"
     }
   ]
 }

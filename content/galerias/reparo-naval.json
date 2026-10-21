@@ -1,17 +1,21 @@
 {
   "titulo": "Nossos Trabalhos",
+  "titulo_en": "Our Work",
   "fotos": [
     {
       "imagem": "/uploads/reparo-naval-reparo_naval.png",
-      "descricao": "Equipamento de mergulho profissional - Reparo Naval Safe Offshore"
+      "descricao": "Equipamento de mergulho profissional - Reparo Naval Safe Offshore",
+      "descricao_en": "Commercial diving equipment - Safe Offshore"
     },
     {
       "imagem": "/uploads/reparo-naval-reparo_naval2.png",
-      "descricao": "Mergulhadores em serviço subaquático - Reparo Naval Safe Offshore"
+      "descricao": "Mergulhadores em serviço subaquático - Reparo Naval Safe Offshore",
+      "descricao_en": "Divers on an underwater job - Safe Offshore"
     },
     {
       "imagem": "/uploads/reparo-naval-reparo_naval3.png",
-      "descricao": "Mergulhador realizando manutenção subaquática - Reparo Naval Safe Offshore"
+      "descricao": "Mergulhador realizando manutenção subaquática - Reparo Naval Safe Offshore",
+      "descricao_en": "Diver performing underwater maintenance - Safe Offshore"
     }
   ]
 }

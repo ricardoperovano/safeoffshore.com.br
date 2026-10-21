@@ -48,6 +48,29 @@ document.addEventListener('DOMContentLoaded', function() {
     initCookieConsent();
 });
 
+/* ========== Idioma ========== */
+// Textos gerados pelo script seguem o idioma da página (<html lang="en"> nas páginas em /en/).
+const LANG_EN = document.documentElement.lang === 'en';
+const TEXTS = LANG_EN ? {
+    cookiePrefs: 'Cookie preferences',
+    cookieLabel: 'Cookie notice',
+    cookieText: 'We use Google Analytics cookies to understand how the site is used and improve it. They are only enabled if you accept.',
+    accept: 'Accept',
+    decline: 'Decline',
+    quoteGreeting: 'Hello! I would like to request a quote.',
+    name: 'Name', company: 'Company', phone: 'Phone', service: 'Service',
+    quoteSubject: 'Quote request'
+} : {
+    cookiePrefs: 'Preferências de cookies',
+    cookieLabel: 'Aviso de cookies',
+    cookieText: 'Usamos cookies do Google Analytics para entender como o site é usado e melhorá-lo. Eles só são ativados se você aceitar.',
+    accept: 'Aceitar',
+    decline: 'Recusar',
+    quoteGreeting: 'Olá! Gostaria de solicitar um orçamento.',
+    name: 'Nome', company: 'Empresa', phone: 'Telefone', service: 'Serviço',
+    quoteSubject: 'Orçamento'
+};
+
 /* ========== Aviso de cookies (LGPD) ========== */
 // O Analytics só é carregado depois do "Aceitar" (ver carregarAnalytics() no <head>).
 const CONSENT_KEY = 'cookies-consentimento';
@@ -66,7 +89,7 @@ function initCookieConsent() {
         const prefs = document.createElement('button');
         prefs.type = 'button';
         prefs.className = 'cookie-prefs-link';
-        prefs.textContent = 'Preferências de cookies';
+        prefs.textContent = TEXTS.cookiePrefs;
         prefs.addEventListener('click', showCookieBanner);
         footerBottom.appendChild(prefs);
     }
@@ -79,12 +102,12 @@ function showCookieBanner() {
     banner.id = 'cookieBanner';
     banner.className = 'cookie-banner';
     banner.setAttribute('role', 'region');
-    banner.setAttribute('aria-label', 'Aviso de cookies');
+    banner.setAttribute('aria-label', TEXTS.cookieLabel);
     banner.innerHTML = `
-        <p>Usamos cookies do Google Analytics para entender como o site é usado e melhorá-lo. Eles só são ativados se você aceitar.</p>
+        <p>${TEXTS.cookieText}</p>
         <div class="cookie-banner-actions">
-            <button type="button" class="btn btn-primary" data-consent="aceito">Aceitar</button>
-            <button type="button" class="btn btn-outline-light" data-consent="recusado">Recusar</button>
+            <button type="button" class="btn btn-primary" data-consent="aceito">${TEXTS.accept}</button>
+            <button type="button" class="btn btn-outline-light" data-consent="recusado">${TEXTS.decline}</button>
         </div>`;
     banner.addEventListener('click', function(e) {
         const choice = e.target.closest('[data-consent]');
@@ -581,12 +604,12 @@ function initContactForm() {
 
         const field = id => document.getElementById(id).value.trim();
         const lines = [
-            'Olá! Gostaria de solicitar um orçamento.',
+            TEXTS.quoteGreeting,
             '',
-            `Nome: ${field('name')}`,
-            field('company') ? `Empresa: ${field('company')}` : null,
-            `Telefone: ${field('phone')}`,
-            field('service') ? `Serviço: ${field('service')}` : null,
+            `${TEXTS.name}: ${field('name')}`,
+            field('company') ? `${TEXTS.company}: ${field('company')}` : null,
+            `${TEXTS.phone}: ${field('phone')}`,
+            field('service') ? `${TEXTS.service}: ${field('service')}` : null,
             '',
             field('message')
         ];
@@ -595,7 +618,7 @@ function initContactForm() {
         trackContact(channel === 'email' ? 'email' : 'whatsapp', 'formulario_orcamento');
 
         if (channel === 'email') {
-            const subject = `Orçamento${field('service') ? ' - ' + field('service') : ''} (site)`;
+            const subject = `${TEXTS.quoteSubject}${field('service') ? ' - ' + field('service') : ''} (site)`;
             window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(text)}`;
         } else {
             window.open(`https://wa.me/${CONTACT_WHATSAPP}?text=${encodeURIComponent(text)}`, '_blank', 'noopener');

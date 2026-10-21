@@ -1,13 +1,16 @@
 {
   "titulo": "Operações de Manutenção",
+  "titulo_en": "Maintenance Operations",
   "fotos": [
     {
       "imagem": "/uploads/sinalizacao-nautica-odizio_boia_articulada.png",
-      "legenda": "Rodízio de Boia Articulada"
+      "legenda": "Rodízio de Boia Articulada",
+      "legenda_en": "Articulated buoy replacement"
     },
     {
       "imagem": "/uploads/sinalizacao-nautica-rodizio_boia_bl1.jpg",
-      "legenda": "Rodízio de Bóia BL1"
+      "legenda": "Rodízio de Bóia BL1",
+      "legenda_en": "BL1 buoy replacement"
     }
   ]
 }
