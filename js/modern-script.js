@@ -368,12 +368,21 @@ function initGalleryModal() {
 
     if (!modal || galleryItems.length === 0) return;
 
+    // Legenda da foto ampliada: a legenda visível (galeria, sinalização) ou o texto alternativo
+    const modalCaption = document.createElement('p');
+    modalCaption.className = 'modal-caption';
+    modalCaption.id = 'modalCaption';
+    modal.appendChild(modalCaption);
+
     let currentImageIndex = 0;
     const images = Array.from(galleryItems).map(item => {
         const img = item.tagName === 'IMG' ? item : item.querySelector('img');
+        const visible = item.querySelector('figcaption, .operation-caption');
+        const caption = visible ? visible.textContent : img.alt.replace(/\s*-\s*[^-]*Safe Offshore$/, '');
         return {
             src: img.src,
-            alt: img.alt
+            alt: img.alt,
+            caption: caption.trim()
         };
     });
 
@@ -392,6 +401,8 @@ function initGalleryModal() {
     function showImage() {
         modalImage.src = images[currentImageIndex].src;
         modalImage.alt = images[currentImageIndex].alt;
+        modalCaption.textContent = images[currentImageIndex].caption;
+        modalCaption.hidden = !images[currentImageIndex].caption;
     }
 
     function nextImage() {

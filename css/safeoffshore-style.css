@@ -843,7 +843,7 @@ section {
 
 .gallery-modal img {
     max-width: 90%;
-    max-height: 90%;
+    max-height: 80%;
     object-fit: contain;
 }
 
@@ -3041,5 +3041,29 @@ section {
 
     .logo img {
         height: 40px;
+    }
+}
+
+/* Legenda da foto ampliada (criada pelo script do modal) */
+.modal-caption {
+    position: absolute;
+    left: 50%;
+    bottom: 1.5rem;
+    transform: translateX(-50%);
+    max-width: min(90%, 900px);
+    margin: 0;
+    padding: 0.6rem 1.1rem;
+    background-color: rgba(15, 34, 56, 0.85);
+    border-left: 3px solid var(--accent-color);
+    border-radius: 4px;
+    color: var(--text-light);
+    font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .modal-caption {
+        bottom: 1rem;
+        font-size: 0.9rem;
     }
 }
