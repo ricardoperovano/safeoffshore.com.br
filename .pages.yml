@@ -9,6 +9,23 @@ media:
   extensions: [jpg, jpeg, png, webp]
 
 content:
+  - name: galeria
+    label: "Galeria de imagens (página livre)"
+    type: file
+    path: content/galerias/galeria.json
+    fields:
+      - name: fotos
+        label: "Fotos (aparecem na ordem desta lista)"
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{fields.legenda}"
+        fields:
+          - { name: imagem, label: Foto, type: image, required: true }
+          - { name: legenda, label: "Legenda (aparece embaixo da foto)", type: string, required: true }
+          - { name: legenda_en, label: "Legenda em inglês (se vazio, usa a de cima)", type: string }
+
   - name: projetos
     label: "Página inicial — Projetos realizados"
     type: file

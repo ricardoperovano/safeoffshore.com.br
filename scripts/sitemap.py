@@ -17,6 +17,7 @@ PARES = {
     "about-us/": "en/about-us/",
     "principais-clientes-1/": "en/clients/",
     "contato/": "en/contact/",
+    "galeria/": "en/gallery/",
     "servicos/": "en/services/",
     "servicos/sinalizacao-nautica/": "en/services/aids-to-navigation/",
     "servicos/comercio-de-equipamentos-de-sinalizacao-nautica/": "en/services/navigation-aids-equipment/",

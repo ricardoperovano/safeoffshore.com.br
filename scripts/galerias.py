@@ -27,6 +27,7 @@ MANIFESTO = SAIDA / "manifesto.json"
 
 # modelo -> como a galeria é desenhada; paginas -> (arquivo, variante)
 GALERIAS = {
+    "galeria": {"rotulo": "Galeria de Imagens", "modelo": "mosaico", "paginas": [("galeria/index.html", None), ("en/gallery/index.html", None)]},
     "hidreletricas": {"rotulo": "Hidrelétricas", "modelo": "grade", "paginas": [("servicos/hidreletricas/index.html", None), ("en/services/hydropower-plants/index.html", None)]},
     "apoio-subaquatico": {"rotulo": "Apoio Subaquático", "modelo": "grade", "paginas": [("servicos/apoio-subaquatico/index.html", None), ("en/services/underwater-services/index.html", None)]},
     "reparo-naval": {"rotulo": "Reparo Naval", "modelo": "grade", "paginas": [("servicos/reparo-naval/index.html", None), ("en/services/underwater-ship-repair/index.html", None)]},
@@ -39,7 +40,7 @@ GALERIAS = {
     "clientes": {"rotulo": "Clientes", "modelo": "clientes", "paginas": [("principais-clientes-1/index.html", "pagina"), ("index.html", "home"), ("en/clients/index.html", "pagina"), ("en/index.html", "home")]},
 }
 
-LARGURA_MAXIMA = {"grade": 1600, "legendas": 1600, "projetos": 1600, "clientes": 400}
+LARGURA_MAXIMA = {"mosaico": 1600, "grade": 1600, "legendas": 1600, "projetos": 1600, "clientes": 400}
 CLIENTES_NA_HOME = 6
 
 
@@ -113,7 +114,19 @@ def renderizar(modelo, variante, dados, itens, prefixo, rotulo, ingles):
     e = html.escape
     sufixo = "Safe Offshore"
     if not itens:
+        if modelo == "mosaico":  # a página da galeria não pode ficar em branco
+            return [f'<p class="photo-gallery-empty">{"New photos coming soon." if ingles else "Novas fotos em breve."}</p>']
         return []
+    if modelo == "mosaico":
+        linhas = ['<div class="photo-gallery-grid">']
+        for item, foto in itens:
+            legenda = texto(item, "legenda", ingles)
+            linhas += ['    <figure class="gallery-item">',
+                       "        " + picture(prefixo, foto, legenda or f"{rotulo} - {sufixo}")]
+            if legenda:
+                linhas += [f"        <figcaption>{e(legenda)}</figcaption>"]
+            linhas += ["    </figure>"]
+        return linhas + ["</div>"]
     if modelo == "grade":
         titulo = texto(dados, "titulo", ingles, "Nossos Trabalhos")
         linhas = ([f"<h3>{e(titulo)}</h3>"] if titulo else []) + ['<div class="service-images-grid">']

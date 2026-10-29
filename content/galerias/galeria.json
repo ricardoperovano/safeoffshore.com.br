@@ -1,0 +1,99 @@
+{
+  "fotos": [
+    {
+      "imagem": "/uploads/projetos-55b14eb5-ef38-1072-b53b-1d5166b49d96.jpg",
+      "legenda": "Sinalização Náutica - Porto de Vitória - ES",
+      "legenda_en": "Aids to Navigation - Port of Vitória, Brazil"
+    },
+    {
+      "imagem": "/uploads/projetos-b132f483-2500-a6d8-edc7-79d446bfcdd4.jpg",
+      "legenda": "Balizamento - Canal de Acesso",
+      "legenda_en": "Buoyage - Access Channel"
+    },
+    {
+      "imagem": "/uploads/projetos-IMG_20170722_062927842.jpg",
+      "legenda": "Apoio Subaquático - Inspeção e Manutenção",
+      "legenda_en": "Underwater Support - Inspection and Maintenance"
+    },
+    {
+      "imagem": "/uploads/hidreletricas-hidreletricas-1.jpeg",
+      "legenda": "Turbina de hidrelétrica",
+      "legenda_en": "Hydropower plant turbine"
+    },
+    {
+      "imagem": "/uploads/hidreletricas-hidreletricas-2.jpeg",
+      "legenda": "Equipamentos de hidrelétrica",
+      "legenda_en": "Hydropower plant equipment"
+    },
+    {
+      "imagem": "/uploads/hidreletricas-hidreletricas-3.jpeg",
+      "legenda": "Turbina e tubulações",
+      "legenda_en": "Turbine and penstock"
+    },
+    {
+      "imagem": "/uploads/hidreletricas-hidreletricas-4.jpeg",
+      "legenda": "Manutenção de turbinas",
+      "legenda_en": "Turbine maintenance"
+    },
+    {
+      "imagem": "/uploads/hidreletricas-hidreletricas-5.jpeg",
+      "legenda": "Detalhe de turbina hidrelétrica",
+      "legenda_en": "Hydropower turbine detail"
+    },
+    {
+      "imagem": "/uploads/apoio-subaquatico-merg282b7.png",
+      "legenda": "Mergulho Profissional",
+      "legenda_en": "Commercial diving"
+    },
+    {
+      "imagem": "/uploads/apoio-subaquatico-merg382b7.png",
+      "legenda": "Apoio Subaquático",
+      "legenda_en": "Underwater support"
+    },
+    {
+      "imagem": "/uploads/apoio-subaquatico-Imagem182b7.jpg",
+      "legenda": "Serviços de Mergulho",
+      "legenda_en": "Diving services"
+    },
+    {
+      "imagem": "/uploads/apoio-subaquatico-Imagem382b7.jpg",
+      "legenda": "Inspeção Subaquática",
+      "legenda_en": "Underwater inspection"
+    },
+    {
+      "imagem": "/uploads/reparo-naval-reparo_naval.png",
+      "legenda": "Equipamento de mergulho profissional",
+      "legenda_en": "Commercial diving equipment"
+    },
+    {
+      "imagem": "/uploads/obras-civis-limeza_cais.jpeg",
+      "legenda": "Inspeção subaquática de pilares de cais",
+      "legenda_en": "Underwater inspection of quay piles"
+    },
+    {
+      "imagem": "/uploads/obras-civis-limpeza_cais_2.jpeg",
+      "legenda": "Inspeção de estruturas submersas",
+      "legenda_en": "Inspection of submerged structures"
+    },
+    {
+      "imagem": "/uploads/documentacao-marinha-fabricao_1.jpeg",
+      "legenda": "Fabricação de boia articulada",
+      "legenda_en": "Articulated buoy fabrication"
+    },
+    {
+      "imagem": "/uploads/documentacao-marinha-fabricacao_2.jpeg",
+      "legenda": "Fabricação de estruturas metálicas",
+      "legenda_en": "Steel structure fabrication"
+    },
+    {
+      "imagem": "/uploads/documentacao-marinha-fabricacao_6.jpeg",
+      "legenda": "Fabricação de equipamentos náuticos",
+      "legenda_en": "Nautical equipment fabrication"
+    },
+    {
+      "imagem": "/uploads/documentacao-marinha-fabricacao_7.jpeg",
+      "legenda": "Produção de poitas",
+      "legenda_en": "Mooring sinker production"
+    }
+  ]
+}

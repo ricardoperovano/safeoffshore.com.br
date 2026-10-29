@@ -5,6 +5,18 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
 e este projeto adere ao [Versionamento Semântico](https://semver.org/lang/pt-BR/).
 
+## [2.3.0] - Outubro 2026
+
+### ✨ Adicionado
+- Versão em inglês em `/en/` (15 páginas), seletor PT/EN, hreflang e sitemap bilíngue
+- Central de artigos em inglês `/en/insights/` gerada de `content/insights/*.md`
+- Página "Galeria de Imagens" (`/galeria/` e `/en/gallery/`), editável pelo painel, com link no menu e no rodapé
+
+### 🔧 Alterado
+- Menu compacto entre 769 e 1200px para caber em uma linha
+
+---
+
 ## [2.2.0] - Outubro 2026
 
 ### 📸 Painel de fotos gerenciado pelo cliente

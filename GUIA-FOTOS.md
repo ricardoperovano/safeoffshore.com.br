@@ -23,6 +23,7 @@ Pronto. Em cerca de 3 minutos a página do site já mostra a mudança.
 
 | Galeria | Onde aparece | O que preencher |
 |---|---|---|
+| Galeria de imagens (página livre) | Página "Galeria" do menu, em português e inglês | Foto e legenda. Use para qualquer foto que não tenha lugar nos serviços |
 | Página inicial — Projetos realizados | Home | Foto, serviço e local |
 | Clientes — logos | Página Clientes. Os 6 primeiros também aparecem na home | Logo e nome do cliente |
 | Sinalização Náutica — Operações | Página de Sinalização | Foto e legenda |
